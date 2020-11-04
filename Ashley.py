@@ -16,32 +16,124 @@ except :
     import os
     os.system("clear")
 
-import Pack.core as core
-
 import mysql.connector
 
 cnx = mysql.connector.connect (
     host='localhost' ,
-    user='user' ,
-    password='pswd' ,
+    user='amir' ,
+    password='Black.0481244859IQ.' ,
     database='Ashley'
 )
 
 cursor = cnx.cursor()
 
-print("Welcome !")
-
-while True :
-    q = input("What to do !? ")
-
-    if q == 'instagram' :
-        core.get_instagram()
-    else :
-        pass
+print("Welcome !\n\n")
 
 
-def instagram(fname , lname , email , phone , username , password , site) :
+def instagram():
+    print("Insert a new Instagram account . . .\n")
+    fname = input("What is your first name ? ")
+    lname = input("What is your last name ? ")
+    email = input("What is your email ? ")
+    phone = input("What is your phone ? ")
+    username = input("What is your username ? ")
+    password = input("What is your password ? ")
+
+    site = 'instagram'
+
     cursor.execute(f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
     cnx.commit()
+
+    print("\nDone !\n")
+
+def twitter():
+    print("Insert a new Twitter account . . .\n")
+    fname = input("What is your first name ? ")
+    lname = input("What is your last name ? ")
+    email = input("What is your email ? ")
+    phone = input("What is your phone ? ")
+    username = input("What is your username ? ")
+    password = input("What is your password ? ")
+
+    site = 'twitter'
+
+    cursor.execute(f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+    cnx.commit()
+
+    print("\nDone !\n")
+
+def facebook():
+    print("Insert a new Facebook account . . .\n")
+    fname = input("What is your first name ? ")
+    lname = input("What is your last name ? ")
+    email = input("What is your email ? ")
+    phone = input("What is your phone ? ")
+    username = input("What is your username ? ")
+    password = input("What is your password ? ")
+
+    site = 'facebook'
+
+    cursor.execute(f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+    cnx.commit()
+
+    print("\nDone !\n")
+
+def github():
+    print("Insert a new Github account . . .\n")
+    fname = input("What is your first name ? ")
+    lname = input("What is your last name ? ")
+    email = input("What is your email ? ")
+    phone = input("What is your phone ? ")
+    username = input("What is your username ? ")
+    password = input("What is your password ? ")
+
+    site = 'github'
+
+    cursor.execute(f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+    cnx.commit()
+
+    print("\nDone !\n")
+
+def show_instagram() :
+    site = 'instagram'
+    cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+    for (fname , lname , email , phone , username , password , site) in cursor :
+        print(fname , lname , email , phone , username , password , site)
+
+def show_twitter() :
+    site = 'twitter'
+    cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+    for (fname , lname , email , phone , username , password , site) in cursor :
+        print(fname , lname , email , phone , username , password , site)
+
+def show_facebook() :
+    site = 'facebook'
+    cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+    for (fname , lname , email , phone , username , password , site) in cursor :
+        print(fname , lname , email , phone , username , password , site)
+
+def show_github() :
+    site = 'github'
+    cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+    for (fname , lname , email , phone , username , password , site) in cursor :
+        print(fname , lname , email , phone , username , password , site)
+
+while True :
+    q = input("What you wanna insert !? ")
+
+    if q == 'instagram' :
+        instagram()
+    elif q == 'twitter' :
+        twitter()
+    elif q == 'facebook' :
+        facebook()
+    elif q == 'github' :
+        github()
+    elif q == 'show instagram' :
+        show_instagram()
+    elif q == 'List' :
+        print('Instagram , Twitter , Facebook , Github')
+    else :
+        pass
 
 cnx.close()
