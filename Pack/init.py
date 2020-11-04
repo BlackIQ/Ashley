@@ -9,8 +9,8 @@ print("Initialising . . .\n")
 
 cnx = mysql.connector.connect (
     host='localhost' ,
-    user='amir' ,
-    password='Black.0481244859IQ.'
+    user='usr' ,
+    password='pswd'
 )
 
 cursor = cnx.cursor()
