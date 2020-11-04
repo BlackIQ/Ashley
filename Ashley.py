@@ -98,25 +98,25 @@ def show_instagram() :
     site = 'instagram'
     cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
     for (fname , lname , email , phone , username , password , site) in cursor :
-        print(fname , lname , email , phone , username , password , site)
+        print(f"First name : {fname} | Last name :  {lname} | Phone : {phone} | Email :  {email} | Username : {username} | Password : {password}")
 
 def show_twitter() :
     site = 'twitter'
     cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
     for (fname , lname , email , phone , username , password , site) in cursor :
-        print(fname , lname , email , phone , username , password , site)
+        print(f"First name : {fname} | Last name :  {lname} | Phone : {phone} | Email :  {email} | Username : {username} | Password : {password}")
 
 def show_facebook() :
     site = 'facebook'
     cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
     for (fname , lname , email , phone , username , password , site) in cursor :
-        print(fname , lname , email , phone , username , password , site)
+        print(f"First name : {fname} | Last name :  {lname} | Phone : {phone} | Email :  {email} | Username : {username} | Password : {password}")
 
 def show_github() :
     site = 'github'
     cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
     for (fname , lname , email , phone , username , password , site) in cursor :
-        print(fname , lname , email , phone , username , password , site)
+        print(f"First name : {fname} | Last name :  {lname} | Phone : {phone} | Email :  {email} | Username : {username} | Password : {password}")
 
 while True :
     q = input("What you wanna insert !? ")
@@ -131,6 +131,12 @@ while True :
         github()
     elif q == 'show instagram' :
         show_instagram()
+    elif q == 'show twitter' :
+        show_twitter()
+    elif q == 'show facebook' :
+        show_facebook()
+    elif q == 'show github' :
+        show_github()
     elif q == 'List' :
         print('Instagram , Twitter , Facebook , Github')
     else :
