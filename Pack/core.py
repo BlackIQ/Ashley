@@ -1,3 +1,4 @@
+from ..Ashley import instagram
 
 def get_instagram() :
     print("Insert a new Instagram account\n")
@@ -10,3 +11,4 @@ def get_instagram() :
 
     site = 'instagram'
 
+    instagram(fname , lname , email , phone , username , password , site)

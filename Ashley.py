@@ -20,7 +20,7 @@ import Pack.core as core
 
 import mysql.connector
 
-cnx = mysql.connector.connect(
+cnx = mysql.connector.connect (
     host='localhost' ,
     user='user' ,
     password='pswd' ,
