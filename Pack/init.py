@@ -1,5 +1,4 @@
 import mysql.connector
-from os import system
 
 def w() :
     file = open('Pack/status.py', 'w')
