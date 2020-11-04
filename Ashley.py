@@ -1,6 +1,5 @@
-'''
 try :
-    from Pack.var.status import status
+    from Pack.status import status
     if status == True :
         pass
 except :
@@ -9,16 +8,16 @@ except :
     ask = input('[y , n] ')
     if ask == 'y' :
         import os
-        os.system('python3 Pack/Ashley/src/init.py')
+        os.system('python3 Pack/init.py')
     else :
         import os
         os.system("exit")
     print("ok , done !")
     import os
     os.system("clear")
-'''
 
 import mysql.connector
+
 cnx = mysql.connector.connect(
     host='localhost' ,
     user='amir' ,
