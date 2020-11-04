@@ -1,5 +1,5 @@
 try :
-    from Pack.status import status
+    from .Pack.status import status
     if status == True :
         pass
 except :
