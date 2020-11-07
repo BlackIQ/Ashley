@@ -1,5 +1,5 @@
 try :
-    from .Pack.status import status
+    from Pack.status import status
     if status == True :
         pass
 except :
@@ -18,6 +18,7 @@ except :
 
 from time import sleep
 import mysql.connector
+from prettytable import PrettyTable
 
 cnx = mysql.connector.connect (
     host='localhost' ,
@@ -50,12 +51,11 @@ class instagram :
     def show_instagram(self):
         site = 'instagram'
         cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+        instagram_table = PrettyTable()
+        instagram_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
         for (fname, lname, email, phone, username, password, site) in cursor:
-            print(f"First name : {fname} , Last name :  {lname}\n"
-                  f"Phone : {phone} , Email :  {email}\n"
-                  f"Username : {username} , Password : {password}")
-            print('------------------------------------------')
-
+            instagram_table.add_row([fname , lname , email , phone , username , password])
+        print(instagram_table)
 
 class twitter :
     def insert_twitter(self):
@@ -77,12 +77,11 @@ class twitter :
     def show_twitter(self) :
         site = 'twitter'
         cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+        twitter_table = PrettyTable()
+        twitter_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
         for (fname , lname , email , phone , username , password , site) in cursor :
-            print(f"First name : {fname} , Last name :  {lname}\n"
-                  f"Phone : {phone} , Email :  {email}\n"
-                  f"Username : {username} , Password : {password}")
-            print('------------------------------------------')
-
+            twitter_table.add_row([fname, lname, email, phone, username, password])
+        print(twitter_table)
 
 class facebook :
     def insert_facebook(self):
@@ -104,11 +103,11 @@ class facebook :
     def show_facebook(self) :
         site = 'facebook'
         cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+        facebook_table = PrettyTable()
+        facebook_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
         for (fname , lname , email , phone , username , password , site) in cursor :
-            print(f"First name : {fname} , Last name :  {lname}\n"
-                  f"Phone : {phone} , Email :  {email}\n"
-                  f"Username : {username} , Password : {password}")
-            print('------------------------------------------')
+            facebook_table.add_row([fname, lname, email, phone, username, password])
+        print(facebook_table)
 
 class github :
     def insert_github(self):
@@ -130,11 +129,11 @@ class github :
     def show_github(self) :
         site = 'github'
         cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+        github_table = PrettyTable()
+        github_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
         for (fname , lname , email , phone , username , password , site) in cursor :
-            print(f"First name : {fname} , Last name :  {lname}\n"
-                  f"Phone : {phone} , Email :  {email}\n"
-                  f"Username : {username} , Password : {password}")
-            print('------------------------------------------')
+            github_table.add_row([fname, lname, email, phone, username, password])
+        print(github_table)
 
 Instagram = instagram()
 Twitter = twitter()
