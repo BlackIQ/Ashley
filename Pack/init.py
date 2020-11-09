@@ -1,16 +1,29 @@
 import mysql.connector
 
+print("\n-------------------------------")
+print("Welcome to Ashley Init.py !")
+
+host = input("Your MySQL Host ? ")
+user = input("Your MySQL User ? ")
+password = input("Your MySQL Password ? ")
+
 def w() :
     file = open('Pack/status.py', 'w')
-    file.write("status = True")
+    file.write("status = True\n")
+    file.write(f"host = '{host}'\n")
+    file.write(f"user = '{user}'\n")
+    file.write(f"password = '{password}'\n")
+    file.write(f"database = 'Ashley'")
     file.close()
+
+w()
 
 print("Initialising . . .\n")
 
 cnx = mysql.connector.connect (
-    host='localhost' ,
-    user='usr' ,
-    password='pswd'
+    host=host ,
+    user=user ,
+    password=password
 )
 
 cursor = cnx.cursor()
@@ -25,6 +38,5 @@ cnx.close()
 
 print("Writing the file . . .\n")
 
-w()
-
 print("Done !")
+print("-------------------------------\n")
