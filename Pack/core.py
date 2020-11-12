@@ -1,4 +1,4 @@
-from status import *
+from .status import *
 
 import mysql.connector
 from prettytable import PrettyTable
