@@ -9,7 +9,7 @@ password = input("Your MySQL Password ? ")
 
 def w() :
     file = open('Pack/status.py', 'w')
-    file.write("status = True\n")
+    file.write("status = True\n\n")
     file.write(f"host = '{host}'\n")
     file.write(f"user = '{user}'\n")
     file.write(f"password = '{password}'\n")
