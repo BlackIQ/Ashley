@@ -1,63 +1,73 @@
-try :
+# How to see Ashley is set or not
+
+# If yes :
+try:
     from Pack.status import status
-    if status == True :
+
+    if status == True:
         pass
-except :
+
+# If Not
+except:
+    import os
+
     print("Ashley database is not set .")
     print("do yo want to install ?")
     ask = input('[y , n] ')
-    if ask == 'y' :
-        import os
+    if ask == 'y':
         os.system('python3 Pack/init.py')
-    else :
-        import os
+    else:
         os.system("exit")
     print("ok , done !")
-    import os
     os.system("clear")
 
+# Import Py libs
 from time import sleep
 
+# Import Ashley core
 import Pack.core as core
 
-while True :
+# Main loop
+while True:
+    # Input
     q = input("What you wanna insert !? ")
 
-    if q == 'new instagram' :
+    # Switching !
+    if q == 'new instagram':
         core.Instagram.insert_instagram()
-    elif q == 'new twitter' :
+    elif q == 'new twitter':
         core.Twitter.insert_twitter()
-    elif q == 'new facebook' :
+    elif q == 'new facebook':
         core.Facebook.insert_facebook()
-    elif q == 'new github' :
+    elif q == 'new github':
         core.Github.insert_github()
-    elif q == 'new linkedin' :
+    elif q == 'new linkedin':
         core.Linkedin.insert_linkedin()
-    elif q == 'new sof' :
+    elif q == 'new sof':
         core.Stack.insert_stack()
 
-    elif q == 'show instagram' :
+    elif q == 'show instagram':
         core.Instagram.show_instagram()
-    elif q == 'show twitter' :
+    elif q == 'show twitter':
         core.Twitter.show_twitter()
-    elif q == 'show facebook' :
+    elif q == 'show facebook':
         core.Facebook.show_facebook()
-    elif q == 'show github' :
+    elif q == 'show github':
         core.Github.show_github()
-    elif q == 'show linkedin' :
+    elif q == 'show linkedin':
         core.Linkedin.show_linkedin()
-    elif q == 'show sof' :
+    elif q == 'show sof':
         core.Stack.show_stack()
 
-    elif q == 'List' :
+    elif q == 'List':
         print('Instagram , Twitter , Facebook , Github , Stack Over Flow , Linkedin')
 
-    elif q == 'exit' :
+    elif q == 'exit':
         print("Bye !")
         sleep(3)
         core.cnx.close()
         quit()
 
-    else :
+    else:
         print("I didn't got that !\n")
         pass

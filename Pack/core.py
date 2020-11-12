@@ -1,8 +1,11 @@
+# Import user's data
 from .status import *
 
+# Import python libs
 import mysql.connector
 from prettytable import PrettyTable
 
+# Start the MySQL connector
 cnx = mysql.connector.connect(
     host=host,
     user=user,
@@ -10,11 +13,13 @@ cnx = mysql.connector.connect(
     database=database
 )
 
+# Make a cursor
 cursor = cnx.cursor()
 
 print("Welcome !\n\n")
 
 
+# Instagram Class
 class instagram:
     def insert_instagram(self):
         site = 'instagram'
@@ -45,6 +50,7 @@ class instagram:
         print(instagram_table)
 
 
+# Twitter Class
 class twitter:
     def insert_twitter(self):
         site = 'twitter'
@@ -75,6 +81,7 @@ class twitter:
         print(twitter_table)
 
 
+# Facebook Class
 class facebook:
     def insert_facebook(self):
         site = 'facebook'
@@ -105,6 +112,7 @@ class facebook:
         print(facebook_table)
 
 
+# Github Class
 class github:
     def insert_github(self):
         site = 'github'
@@ -135,6 +143,7 @@ class github:
         print(github_table)
 
 
+# Stack Over Flow Class
 class stack:
     def insert_stack(self):
         site = 'SOF'
@@ -165,6 +174,7 @@ class stack:
         print(stack_table)
 
 
+# Linkedin Class
 class linkedin:
     def insert_linkedin(self):
         site = 'linkedin'
@@ -195,6 +205,7 @@ class linkedin:
         print(linkedin_table)
 
 
+# Set Classes
 Instagram = instagram()
 Twitter = twitter()
 Facebook = facebook()
