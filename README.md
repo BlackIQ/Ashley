@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.0.5</b></sup></p>
+    <p><b>Ashley</b> Version <sup><b>0.0.6</b></sup></p>
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <hr>
