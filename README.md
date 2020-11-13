@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.0.4</b></sup></p>
+    <p><b>Ashley</b> Version <sup><b>0.0.5</b></sup></p>
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <hr>
@@ -32,7 +32,7 @@
     <br>
     <code>$ sudo systemctl restart mysql.service</code>
     <hr>
-    <h2>How to get , Create venv & Install libss ?</h2>
+    <h2>How to get , Create venv & Install libs ?</h2>
     <code>git clone https://github.com/BlackIQ/Ashley && cd Ashley</code>
     <br>
     <code>python3 -m venv venv && source venv/bin/activate</code>
