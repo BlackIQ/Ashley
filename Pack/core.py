@@ -263,6 +263,31 @@ class gmail:
         print(gmail_table)
 
 
+class all:
+    def social(self):
+        cursor.execute("SELECT * FROM Social")
+        social_table = PrettyTable()
+        social_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            social_table.add_row([fname, lname, email, phone, username, password, site])
+
+        print(social_table)
+
+    def emails(self):
+        cursor.execute(f"SELECT * FROM Emails")
+        emails_table = PrettyTable()
+        emails_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Site"]
+
+        for (fname, lname, username, password, phone, site) in cursor:
+            emails_table.add_row([fname, lname, username, password, phone, site])
+
+        print(emails_table)
+
+    def all(self):
+        print("All !")
+
+
 # Set Social Classes
 Instagram = instagram()
 Twitter = twitter()
@@ -271,6 +296,9 @@ Github = github()
 Stack = stack()
 Linkedin = linkedin()
 
-# Srt Emails Classes
+# Set Emails Classes
 Yahoo = yahoo()
 Gmail = gmail()
+
+# Set All Of Them !
+All = all()
