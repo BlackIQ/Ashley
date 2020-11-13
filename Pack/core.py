@@ -205,10 +205,72 @@ class linkedin:
         print(linkedin_table)
 
 
-# Set Classes
+class yahoo:
+    def insert_yahoo(self):
+        site = 'yahoo'
+        print("Insert a new yahoo mail . . .\n")
+        fname = input(f"What is your {site} first name ? ")
+        lname = input(f"What is your {site} last name ? ")
+        username = input(f"What is your {site} username ? ")
+        password = input(f"What is your {site} password ? ")
+        phone = input(f"What is your {site} phone ? ")
+
+        cursor.execute(
+            f"INSERT INTO Emails VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
+
+        cnx.commit()
+
+        print("\nDone !\n")
+
+    def show_yahoo(self):
+        site = 'yahoo'
+        cursor.execute(f"SELECT * FROM Emails WHERE Site = '{site}'")
+        yahoo_table = PrettyTable()
+        yahoo_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone"]
+
+        for (fname, lname, username, password, phone, site) in cursor:
+            yahoo_table.add_row([fname, lname, username, password, phone])
+
+        print(yahoo_table)
+
+
+class gmail:
+    def insert_gmail(self):
+        site = 'gmail'
+        print("Insert a new gmail mail . . .\n")
+        fname = input(f"What is your {site} first name ? ")
+        lname = input(f"What is your {site} last name ? ")
+        username = input(f"What is your {site} username ? ")
+        password = input(f"What is your {site} password ? ")
+        phone = input(f"What is your {site} phone ? ")
+
+        cursor.execute(
+            f"INSERT INTO Emails VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
+
+        cnx.commit()
+
+        print("\nDone !\n")
+
+    def show_gmail(self):
+        site = 'gmail'
+        cursor.execute(f"SELECT * FROM Emails WHERE Site = '{site}'")
+        gmail_table = PrettyTable()
+        gmail_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone"]
+
+        for (fname, lname, username, password, phone, site) in cursor:
+            gmail_table.add_row([fname, lname, username, password, phone])
+
+        print(gmail_table)
+
+
+# Set Social Classes
 Instagram = instagram()
 Twitter = twitter()
 Facebook = facebook()
 Github = github()
 Stack = stack()
 Linkedin = linkedin()
+
+# Srt Emails Classes
+Yahoo = yahoo()
+Gmail = gmail()

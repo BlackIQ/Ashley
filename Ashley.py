@@ -59,6 +59,16 @@ while True:
     elif q == 'show sof':
         core.Stack.show_stack()
 
+    elif q == "new yahoo" :
+        core.Yahoo.insert_yahoo()
+    elif q == "new gmail" :
+        core.Gmail.insert_gmail()
+
+    elif q == "show yahoo" :
+        core.Yahoo.show_yahoo()
+    elif q == "show gmail" :
+        core.Gmail.show_gmail()
+
     elif q == 'List':
         print('Instagram , Twitter , Facebook , Github , Stack Over Flow , Linkedin')
 
