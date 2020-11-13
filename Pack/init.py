@@ -44,7 +44,7 @@ cursor.execute('USE Ashley')
 cursor.execute(
     'CREATE TABLE IF NOT EXISTS `Social` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
 cursor.execute(
-    'CREATE TABLE IF NOT EXISTS `Social` (Fname TEXT , Lname TEXT , Username TEXT , Password TEXT , Phone TEXT , Site TEXT)')
+    'CREATE TABLE IF NOT EXISTS `Emails` (Fname TEXT , Lname TEXT , Username TEXT , Password TEXT , Phone TEXT , Site TEXT)')
 
 cnx.close()
 
