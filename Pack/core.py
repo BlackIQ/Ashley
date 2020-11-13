@@ -275,7 +275,7 @@ class all:
         print(social_table)
 
     def emails(self):
-        cursor.execute(f"SELECT * FROM Emails")
+        cursor.execute("SELECT * FROM Emails")
         emails_table = PrettyTable()
         emails_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Site"]
 
@@ -285,7 +285,13 @@ class all:
         print(emails_table)
 
     def all(self):
-        print("All !")
+        print("Social Table :")
+        All.social()
+
+        print("\n")
+
+        print("Emails Table :")
+        All.emails()
 
 
 # Set Social Classes
