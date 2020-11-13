@@ -1,0 +1,7 @@
+Ashley Version 0.0.2
+
+Last Versions :
+    - Create init.py and first classes                      ->   version 0.0.1
+
+Updates :
+    - Show Insert & Twitter & Facebook + Update init.py
