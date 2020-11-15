@@ -5,7 +5,7 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.0.7                        |
+| Verson : 0.0.8                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
@@ -14,7 +14,6 @@
 +---------------------------------------+
 
 """
-
 
 # Import user's data
 try:
@@ -38,9 +37,6 @@ except:
     os.system("clear")
 
 # Import Py libs
-from time import sleep
-
-# Import Ashley core
 import Pack.core as core
 
 # Main loop
@@ -60,17 +56,17 @@ while True:
 
     # Career ( Insert Part )
     elif q == 'new github':
-        core.Github.insert_github()
+        core.Career.Github.insert_github()
     elif q == 'new linkedin':
-        core.Linkedin.insert_linkedin()
+        core.Career.Linkedin.insert_linkedin()
     elif q == 'new sof':
-        core.Stack.insert_stack()
+        core.Career.Stack.insert_stack()
 
     # Emails ( Insert Part )
     elif q == "new yahoo":
-        core.Yahoo.insert_yahoo()
+        core.Email.Yahoo.insert_yahoo()
     elif q == "new gmail":
-        core.Gmail.insert_gmail()
+        core.Email.Gmail.insert_gmail()
 
     # Social ( Show Part )
     elif q == 'show instagram':
@@ -82,17 +78,17 @@ while True:
 
     # Career ( Show Part )
     elif q == 'show github':
-        core.Github.show_github()
+        core.Career.Github.show_github()
     elif q == 'show linkedin':
-        core.Linkedin.show_linkedin()
+        core.Career.Linkedin.show_linkedin()
     elif q == 'show sof':
-        core.Stack.show_stack()
+        core.Career.Stack.show_stack()
 
     # Emails ( Show Part )
     elif q == "show yahoo":
-        core.Yahoo.show_yahoo()
+        core.Email.Yahoo.show_yahoo()
     elif q == "show gmail":
-        core.Gmail.show_gmail()
+        core.Email.Gmail.show_gmail()
 
     # Select Everything in Social
     elif q == "show social":
@@ -101,7 +97,7 @@ while True:
     elif q == "show emails":
         core.All.emails()
     # Select Everything in Career
-    elif q == "show career" :
+    elif q == "show career":
         core.All.career()
 
     # Select Everything in Database

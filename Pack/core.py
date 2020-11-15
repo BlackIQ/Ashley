@@ -37,6 +37,7 @@ cursor = cnx.cursor()
 
 print("Welcome !\n\n")
 
+
 class social:
     # Instagram Class
     class instagram:
@@ -328,6 +329,7 @@ class all:
 class other:
     from etc.man.man import help
     help()
+
 
 # Set All Of Them !
 All = all()
