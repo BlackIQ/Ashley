@@ -316,9 +316,24 @@ class all:
 
         print(emails_table)
 
+    def career(self):
+        cursor.execute("SELECT * FROM Career")
+        career_table = PrettyTable()
+        career_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            career_table.add_row([fname, lname, email, phone, username, password, site])
+
+        print(career_table)
+
     def all(self):
         print("Social Table :")
         All.social()
+
+        print("\n")
+
+        print("Careers Table :")
+        All.career()
 
         print("\n")
 
@@ -326,15 +341,8 @@ class all:
         All.emails()
 
 
-class other:
-    from etc.man.man import help
-    help()
-
-
 # Set All Of Them !
 All = all()
-# Set Other Class
-Other = other()
 
 # Main Classes
 Social = social()

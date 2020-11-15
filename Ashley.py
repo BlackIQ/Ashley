@@ -106,7 +106,8 @@ while True:
 
     # Ashley's Manual
     elif q == 'help':
-        core.Other.help()
+        from etc.man.man import help
+        help()
 
     # Exit
     elif q == 'exit':

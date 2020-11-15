@@ -17,7 +17,7 @@
 
 import os
 
-def help(self):
+def help():
     os.system("clear")
     print("+--------------------------------------------------------------------------------------------------------+")
     print("|                                        Welcome to Ashley Help !                                        |")
