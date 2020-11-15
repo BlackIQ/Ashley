@@ -1,3 +1,20 @@
+"""
+
++---------------------------------------+
+| In The Name Of God !                  |
++---------------------------------------+
+| Project Name : Ashley                 |
+| Licence : MIT                         |
+| Verson : 0.0.7                        |
+|                                       |
+| Developer : Amirhossein Mohammsdi     |
+| Github : github.com/BlackIQ/Ashley    |
+|                                       |
+| Last Update : 15 , Nov , 2020         |
++---------------------------------------+
+
+"""
+
 # Import MySQL
 import mysql.connector
 from getpass import getpass
