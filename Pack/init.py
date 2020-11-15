@@ -1,5 +1,6 @@
 # Import MySQL
 import mysql.connector
+from getpass import getpass
 
 print("\n-------------------------------")
 print("Welcome to Ashley Init.py !")
@@ -7,7 +8,7 @@ print("Welcome to Ashley Init.py !")
 # Getting data
 host = input("Your MySQL Host ? ")
 user = input("Your MySQL User ? ")
-password = input("Your MySQL Password ? ")
+password = getpass("Your MySQL Password ? ")
 
 
 # Def Write in file

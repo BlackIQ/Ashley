@@ -80,10 +80,9 @@ while True:
 
     elif q == 'exit':
         print("Bye !")
-        sleep(2)
         core.cnx.close()
         quit()
 
     else:
-        print("I didn't got that !\n")
+        print("I didn't get that !\n")
         pass

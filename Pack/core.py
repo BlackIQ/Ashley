@@ -3,6 +3,7 @@ from .status import *
 
 # Import python libs
 from prettytable import PrettyTable
+from getpass import getpass
 import mysql.connector
 import os
 
@@ -44,7 +45,7 @@ class instagram:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -75,7 +76,7 @@ class twitter:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -106,7 +107,7 @@ class facebook:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -137,7 +138,7 @@ class github:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -168,7 +169,7 @@ class stack:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -199,7 +200,7 @@ class linkedin:
         email = input(f"What is your {site} email ? ")
         phone = input(f"What is your {site} phone ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
 
         cursor.execute(
             f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -227,7 +228,7 @@ class yahoo:
         fname = input(f"What is your {site} first name ? ")
         lname = input(f"What is your {site} last name ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
         phone = input(f"What is your {site} phone ? ")
 
         cursor.execute(
@@ -256,7 +257,7 @@ class gmail:
         fname = input(f"What is your {site} first name ? ")
         lname = input(f"What is your {site} last name ? ")
         username = input(f"What is your {site} username ? ")
-        password = input(f"What is your {site} password ? ")
+        password = getpass(f"What is your {site} password ? ")
         phone = input(f"What is your {site} phone ? ")
 
         cursor.execute(
