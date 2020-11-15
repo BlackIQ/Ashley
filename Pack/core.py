@@ -10,7 +10,7 @@
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 15 , Nov , 2020         |
+| Last Update : 16 , Nov , 2020         |
 +---------------------------------------+
 
 """
@@ -36,22 +36,6 @@ cnx = mysql.connector.connect(
 cursor = cnx.cursor()
 
 print("Welcome !\n\n")
-
-# Install Class
-"""
-class install:
-    def init(self):
-        print("Ashley database is not set .")
-        print("do yo want to install ?")
-        ask = input('[y , n] : ')
-        if ask == 'y':
-            os.system('python3 init.py')
-        else:
-            os.system("exit")
-        print("ok , done !")
-        os.system("clear")
-"""
-
 
 class social:
     # Instagram Class
@@ -345,16 +329,12 @@ class other:
     from etc.man.man import help
     help()
 
-
-# Set Install class
-# Install = install()
-
 # Set All Of Them !
 All = all()
-
 # Set Other Class
 Other = other()
 
+# Main Classes
 Social = social()
 Career = career()
 Email = mail()
