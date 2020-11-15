@@ -1,8 +1,10 @@
 Ashley Version 0.0.3
 
+Date : 8 , Nov , 2020
+
 Last Versions :
-    - Create init.py and first classes                      ->   version 0.0.1
-    - Show Insert & Twitter & Facebook + Update init.py     ->   version 0.0.2
+    - Create init.py and first classes                                      ->   version 0.0.1
+    - Show Insert & Twitter & Facebook + Update init.py                     ->   version 0.0.2
 
 Updates :
     - Added Linkedin & Stack Over Flow classes
