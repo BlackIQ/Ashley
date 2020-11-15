@@ -1,11 +1,10 @@
 <html>
   <body>
+    <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
+    <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <h1>Hey There , I am Ashley !</h1>
     <p><b>Ashley</b> Version <sup><b>0.0.8</b></sup></p>
     <p>Last Update : <b>Nov , 16 , 2020</b></p>
-    <hr>
-    <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
-    <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <hr>
     <h2>Requirements ?</h2>
     <p>Well First , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
