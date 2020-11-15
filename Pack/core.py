@@ -293,6 +293,9 @@ class all:
         print("Emails Table :")
         All.emails()
 
+class other:
+    def help(self):
+        print("Help !")
 
 # Set Social Classes
 Instagram = instagram()
@@ -308,3 +311,6 @@ Gmail = gmail()
 
 # Set All Of Them !
 All = all()
+
+# Set Other Class
+Other = other()

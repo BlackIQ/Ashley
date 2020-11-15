@@ -77,12 +77,12 @@ while True:
     elif q == "all":
         core.All.all()
 
-    elif q == 'List':
-        print('Instagram , Twitter , Facebook , Github , Stack Over Flow , Linkedin')
+    elif q == 'help':
+        core.Other.help()
 
     elif q == 'exit':
         print("Bye !")
-        sleep(3)
+        sleep(2)
         core.cnx.close()
         quit()
 

@@ -42,7 +42,7 @@
     <h2>How to run ?</h2>
     <code>python3 Ashley.py</code>
     <hr>
-    <p>For know m better , <b>I am</b> :</p>
+    <p>For know me better , <b>I am</b> :</p>
     <p>Daughter of <b><a href="https://github.com/Annahita2004">Anna</a></b> !</p>
     <p>Developed with &hearts; by <b><a href="https://github.com/BlackIQ">Amir</a></b> .<p>
   </body>
