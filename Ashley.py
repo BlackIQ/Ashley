@@ -49,12 +49,16 @@ while True:
     q = input("What you wanna insert !? ")
 
     # Switching !
+
+    # Social ( Insert Part )
     if q == 'new instagram':
-        core.Instagram.insert_instagram()
+        core.Social.Instagram.insert_instagram()
     elif q == 'new twitter':
-        core.Twitter.insert_twitter()
+        core.Social.Twitter.insert_twitter()
     elif q == 'new facebook':
-        core.Facebook.insert_facebook()
+        core.Social.Facebook.insert_facebook()
+
+    # Career ( Insert Part )
     elif q == 'new github':
         core.Github.insert_github()
     elif q == 'new linkedin':
@@ -62,12 +66,21 @@ while True:
     elif q == 'new sof':
         core.Stack.insert_stack()
 
+    # Emails ( Insert Part )
+    elif q == "new yahoo":
+        core.Yahoo.insert_yahoo()
+    elif q == "new gmail":
+        core.Gmail.insert_gmail()
+
+    # Social ( Show Part )
     elif q == 'show instagram':
-        core.Instagram.show_instagram()
+        core.Social.Instagram.show_instagram()
     elif q == 'show twitter':
-        core.Twitter.show_twitter()
+        core.Social.Twitter.show_twitter()
     elif q == 'show facebook':
-        core.Facebook.show_facebook()
+        core.Social.Facebook.show_facebook()
+
+    # Career ( Show Part )
     elif q == 'show github':
         core.Github.show_github()
     elif q == 'show linkedin':
@@ -75,27 +88,31 @@ while True:
     elif q == 'show sof':
         core.Stack.show_stack()
 
-    elif q == "new yahoo":
-        core.Yahoo.insert_yahoo()
-    elif q == "new gmail":
-        core.Gmail.insert_gmail()
-
+    # Emails ( Show Part )
     elif q == "show yahoo":
         core.Yahoo.show_yahoo()
     elif q == "show gmail":
         core.Gmail.show_gmail()
 
+    # Select Everything in Social
     elif q == "show social":
         core.All.social()
+    # Select Everything in Emails
     elif q == "show emails":
         core.All.emails()
+    # Select Everything in Career
+    elif q == "show career" :
+        core.All.career()
 
+    # Select Everything in Database
     elif q == "all":
         core.All.all()
 
+    # Ashley's Manual
     elif q == 'help':
         core.Other.help()
 
+    # Exit
     elif q == 'exit':
         print("Bye !")
         core.cnx.close()
