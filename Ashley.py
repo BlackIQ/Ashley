@@ -1,6 +1,4 @@
-# How to see Ashley is set or not
-
-# If yes :
+# Import user's data
 try:
     from Pack.status import status
 
@@ -13,7 +11,7 @@ except:
 
     print("Ashley database is not set .")
     print("do yo want to install ?")
-    ask = input('[y , n] ')
+    ask = input('[y , n] : ')
     if ask == 'y':
         os.system('python3 Pack/init.py')
     else:

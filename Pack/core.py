@@ -2,8 +2,9 @@
 from .status import *
 
 # Import python libs
-import mysql.connector
 from prettytable import PrettyTable
+import mysql.connector
+import os
 
 # Start the MySQL connector
 cnx = mysql.connector.connect(
@@ -18,6 +19,20 @@ cursor = cnx.cursor()
 
 print("Welcome !\n\n")
 
+# Install Class
+"""
+class install:
+    def init(self):
+        print("Ashley database is not set .")
+        print("do yo want to install ?")
+        ask = input('[y , n] : ')
+        if ask == 'y':
+            os.system('python3 init.py')
+        else:
+            os.system("exit")
+        print("ok , done !")
+        os.system("clear")
+"""
 
 # Instagram Class
 class instagram:
@@ -293,9 +308,53 @@ class all:
         print("Emails Table :")
         All.emails()
 
+
 class other:
     def help(self):
-        print("Help !")
+        os.system("clear")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("|                                        Welcome to Ashley Help !                                        |")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("\n")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("| Social Medias                                                                                          |")
+        print("|                                                                                                        |")
+        print("| Insert (Add) :                                                                                         |")
+        print("|     command : new <media>    =>  { To add a new social media account }                                 |")
+        print("|                   <media>    =>  { instagram , facebook , twitter , linkedin , Stack over flow (sof) } |")
+        print("| Select (show) :                                                                                        |")
+        print("|     command :  show <media>  =>  { To show you'r social media's account }                              |")
+        print("|                     <media>  =>  { instagram , facebook , twitter , linkedin , Stack over flow (sof) } |")
+        print("| Select All Social Media's account :                                                                    |")
+        print("|     command : show social    =>  { To show all of accounts that saved }                                |")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("\n")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("| Emails                                                                                                 |")
+        print("|                                                                                                        |")
+        print("| Insert (Add) :                                                                                         |")
+        print("|     command : new <mail-service>    =>  { To add a new email account }                                 |")
+        print("|                   <mail-service>    =>  { yahoo , gmail }                                              |")
+        print("| Select (show) :                                                                                        |")
+        print("|     command :  show <mail-service>  =>  { To show you'r social media's account }                       |")
+        print("|                     <mail-service>  =>  { yahoo , gmail }                                              |")
+        print("| Select All Email's account :                                                                           |")
+        print("|     command : show email    =>  { To show all of email accounts that saved }                           |")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("\n")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("| Other Commands                                                                                         |")
+        print("|                                                                                                        |")
+        print("| Select evething saved :                                                                                |")
+        print("|     command : all    =>  { To select all account }                                                     |")
+        print("|                                                                                                        |")
+        print("| Help :                                                                                                 |")
+        print("|     command :  help  =>  { To see the manual of Ashley }                                               |")
+        print("+--------------------------------------------------------------------------------------------------------+")
+        print("\n")
+
+# Set Install class
+# Install = install()
 
 # Set Social Classes
 Instagram = instagram()

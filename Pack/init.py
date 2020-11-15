@@ -24,7 +24,7 @@ def w():
 # Run write in file function
 w()
 
-print("Initialising . . .\n")
+print("\nInitialising . . .\n")
 
 # Start MySQL Connector
 cnx = mysql.connector.connect(
