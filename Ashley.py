@@ -24,19 +24,31 @@ try:
 
 # If Not
 except:
+    import pyttsx3
     import os
 
+    engine = pyttsx3.init()
+
+    engine.say("Ashley database is not set")
     print("Ashley database is not set .")
+    engine.runAndWait()
+    engine.say("do yo want to install")
     print("do yo want to install ?")
+    engine.runAndWait()
     ask = input('[y , n] : ')
     if ask == 'y':
         os.system('python3 Pack/init.py')
     else:
         os.system("exit")
+    engine.say("ok , done")
     print("ok , done !")
+    engine.runAndWait()
     os.system("clear")
 
+    engine.say("Restart Ashley")
     print("Restart Ashley !")
+    engine.runAndWait()
+
     quit()
 
 # Import Py libs
