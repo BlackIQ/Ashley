@@ -1,6 +1,6 @@
 Ashley Version 0.0.8
 
-Date : Nov , 17 , 2020
+Date : Nov , 19 , 2020
 
 Last Versions :
     - Create init.py and first classes                                      ->   version 0.0.1
@@ -13,4 +13,4 @@ Last Versions :
     - man , table for career , father class + Update init , Ashley , core   ->   version 0.0.8
 
 Updates :
-    - make Ashley speakable
+    - make Ashley speakable and fixed version 0.0.8 bugs
