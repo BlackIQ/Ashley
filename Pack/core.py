@@ -22,7 +22,7 @@ from .status import *
 from prettytable import PrettyTable
 from getpass import getpass
 import mysql.connector
-import os
+import pyttsx3
 
 # Start the MySQL connector
 cnx = mysql.connector.connect(
@@ -32,11 +32,14 @@ cnx = mysql.connector.connect(
     database=database
 )
 
+engine = pyttsx3.init()
+
 # Make a cursor
 cursor = cnx.cursor()
 
+engine.say("Welcome")
 print("Welcome !\n\n")
-
+engine.runAndWait()
 
 class social:
     # Instagram Class

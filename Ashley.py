@@ -36,6 +36,9 @@ except:
     print("ok , done !")
     os.system("clear")
 
+    print("Restart Ashley !")
+    quit()
+
 # Import Py libs
 import Pack.core as core
 
