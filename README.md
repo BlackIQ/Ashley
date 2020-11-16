@@ -7,9 +7,9 @@
     <p>Last Update : <b>Nov , 18 , 2020</b></p>
     <hr>
     <h2>Requirements ?</h2>
-    <p>Well First , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
-    <p>Second , it's required to have <b>MySQL</b> too .</p>
-    <p>Third , There are <b>Python libs</b> on <a href="https://github.com/BlackIQ/Ashley/blob/main/requirements.txt">requirements.txt</a></p>
+    <p>Well 1<sup>st</sup> , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
+    <p>2<sup>nd</sup> , it's required to have <b>MySQL</b> , <b>espeak</b> and <b>ffmpeg</b> too .</p>
+    <p>3<sup>rd</sup> There are <b>Python libs</b> on <a href="https://github.com/BlackIQ/Ashley/blob/main/requirements.txt">requirements.txt</a></p>
     <hr>
     <h2>How to install ?</h2>
     <h3>On Linux</h3>
