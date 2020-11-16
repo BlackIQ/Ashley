@@ -18,13 +18,25 @@
 # Import MySQL
 import mysql.connector
 from getpass import getpass
+import pyttsx3
+
+engine = pyttsx3.init()
 
 print("\n-------------------------------")
-print("Welcome to Ashley Init.py !")
+
+engine.say("Welcome to Ashley Init")
+print("Welcome to Ashley Init.py !\n")
+engine.runAndWait()
 
 # Getting data
+engine.say("Your MySQL Host")
+engine.runAndWait()
 host = input("Your MySQL Host ? ")
+engine.say("Your MySQL User")
+engine.runAndWait()
 user = input("Your MySQL User ? ")
+engine.say("Your MySQL Password")
+engine.runAndWait()
 password = getpass("Your MySQL Password ? ")
 
 
@@ -42,7 +54,9 @@ def w():
 # Run write in file function
 w()
 
+engine.say("Initialising")
 print("\nInitialising . . .\n")
+engine.runAndWait()
 
 # Start MySQL Connector
 cnx = mysql.connector.connect(
@@ -54,7 +68,9 @@ cnx = mysql.connector.connect(
 # Create a cursor
 cursor = cnx.cursor()
 
+engine.say("Executing Queries")
 print("Executing Queries . . .\n")
+engine.runAndWait()
 
 # Executing and creating tables
 cursor.execute('CREATE DATABASE IF NOT EXISTS Ashley')
@@ -69,7 +85,12 @@ cursor.execute(
 
 cnx.close()
 
-print("Writing the file . . .\n")
+engine.say("Writing in the file")
+print("Writing in the file . . .\n")
+engine.runAndWait()
 
+engine.say("Done")
 print("Done !")
+engine.runAndWait()
+
 print("-------------------------------\n")
