@@ -54,9 +54,15 @@ except:
 # Import Py libs
 import Pack.core as core
 
+import pyttsx3
+
+a_engine = pyttsx3.init()
+
 # Main loop
 while True:
     # Input
+    a_engine.say("What you wanna insert")
+    a_engine.runAndWait()
     q = input("What you wanna insert !? ")
 
     # Switching !
@@ -122,6 +128,7 @@ while True:
     # Ashley's Manual
     elif q == 'help':
         from etc.man.man import help
+
         help()
 
     # Exit

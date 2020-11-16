@@ -41,17 +41,33 @@ engine.say("Welcome")
 print("Welcome !\n\n")
 engine.runAndWait()
 
+
 class social:
     # Instagram Class
     class instagram:
         def insert_instagram(self):
+            s_engine = pyttsx3.init()
             site = 'instagram'
-            print("Insert a new Instagram account . . .\n")
+            s_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            s_engine.runAndWait()
+            s_engine.say(f"What is your {site} first name")
+            s_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            s_engine.say(f"What is your {site} last name")
+            s_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            s_engine.say(f"What is your {site} email")
+            s_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            s_engine.say(f"What is your {site} phone")
+            s_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            s_engine.say(f"What is your {site} username")
+            s_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            s_engine.say(f"What is your {site} password")
+            s_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
@@ -59,6 +75,8 @@ class social:
 
             cnx.commit()
 
+            s_engine.say("Done")
+            s_engine.runAndWait()
             print("\nDone !\n")
 
         def show_instagram(self):
@@ -75,13 +93,28 @@ class social:
     # Twitter Class
     class twitter:
         def insert_twitter(self):
+            s_engine = pyttsx3.init()
             site = 'twitter'
-            print("Insert a new Twitter account . . .\n")
+            s_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            s_engine.runAndWait()
+            s_engine.say(f"What is your {site} first name")
+            s_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            s_engine.say(f"What is your {site} last name")
+            s_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            s_engine.say(f"What is your {site} email")
+            s_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            s_engine.say(f"What is your {site} phone")
+            s_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            s_engine.say(f"What is your {site} username")
+            s_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            s_engine.say(f"What is your {site} password")
+            s_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
@@ -89,6 +122,8 @@ class social:
 
             cnx.commit()
 
+            s_engine.say("Done")
+            s_engine.runAndWait()
             print("\nDone !\n")
 
         def show_twitter(self):
@@ -105,13 +140,28 @@ class social:
     # Facebook Class
     class facebook:
         def insert_facebook(self):
+            s_engine = pyttsx3.init()
             site = 'facebook'
-            print("Insert a new Facebook account . . .\n")
+            s_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            s_engine.runAndWait()
+            s_engine.say(f"What is your {site} first name")
+            s_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            s_engine.say(f"What is your {site} last name")
+            s_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            s_engine.say(f"What is your {site} email")
+            s_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            s_engine.say(f"What is your {site} phone")
+            s_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            s_engine.say(f"What is your {site} username")
+            s_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            s_engine.say(f"What is your {site} password")
+            s_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
@@ -119,6 +169,8 @@ class social:
 
             cnx.commit()
 
+            s_engine.say("Done")
+            s_engine.runAndWait()
             print("\nDone !\n")
 
         def show_facebook(self):
@@ -141,25 +193,42 @@ class career:
     # Github Class
     class github:
         def insert_github(self):
+            c_engine = pyttsx3.init()
             site = 'github'
-            print("Insert a new Github account . . .\n")
+            c_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            c_engine.runAndWait()
+            c_engine.say(f"What is your {site} first name")
+            c_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            c_engine.say(f"What is your {site} last name")
+            c_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            c_engine.say(f"What is your {site} email")
+            c_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            c_engine.say(f"What is your {site} phone")
+            c_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            c_engine.say(f"What is your {site} username")
+            c_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            c_engine.say(f"What is your {site} password")
+            c_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
-                f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+                f"INSERT INTO Career VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
 
             cnx.commit()
 
+            c_engine.say("Done")
+            c_engine.runAndWait()
             print("\nDone !\n")
 
         def show_github(self):
             site = 'github'
-            cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+            cursor.execute(f"SELECT * FROM Career WHERE Site = '{site}'")
             github_table = PrettyTable()
             github_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
 
@@ -171,25 +240,42 @@ class career:
     # Stack Over Flow Class
     class stack:
         def insert_stack(self):
-            site = 'SOF'
-            print("Insert a new Stack Over Flow account . . .\n")
+            c_engine = pyttsx3.init()
+            site = 'Stack Over Flow'
+            c_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            c_engine.runAndWait()
+            c_engine.say(f"What is your {site} first name")
+            c_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            c_engine.say(f"What is your {site} last name")
+            c_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            c_engine.say(f"What is your {site} email")
+            c_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            c_engine.say(f"What is your {site} phone")
+            c_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            c_engine.say(f"What is your {site} username")
+            c_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            c_engine.say(f"What is your {site} password")
+            c_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
-                f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+                f"INSERT INTO Career VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
 
             cnx.commit()
 
+            c_engine.say("Done")
+            c_engine.runAndWait()
             print("\nDone !\n")
 
         def show_stack(self):
-            site = 'SOF'
-            cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+            site = 'Stack Over Flow'
+            cursor.execute(f"SELECT * FROM Career WHERE Site = '{site}'")
             stack_table = PrettyTable()
             stack_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
 
@@ -201,25 +287,42 @@ class career:
     # Linkedin Class
     class linkedin:
         def insert_linkedin(self):
+            c_engine = pyttsx3.init()
             site = 'linkedin'
-            print("Insert a new Linkedin account . . .\n")
+            c_engine.say(f"Insert a new {site} account")
+            print(f"Insert a new {site} account . . .\n")
+            c_engine.runAndWait()
+            c_engine.say(f"What is your {site} first name")
+            c_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            c_engine.say(f"What is your {site} last name")
+            c_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            c_engine.say(f"What is your {site} email")
+            c_engine.runAndWait()
             email = input(f"What is your {site} email ? ")
+            c_engine.say(f"What is your {site} phone")
+            c_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
+            c_engine.say(f"What is your {site} username")
+            c_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            c_engine.say(f"What is your {site} password")
+            c_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
 
             cursor.execute(
-                f"INSERT INTO Social VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+                f"INSERT INTO Career VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
 
             cnx.commit()
 
+            c_engine.say("Done")
+            c_engine.runAndWait()
             print("\nDone !\n")
 
         def show_linkedin(self):
             site = 'linkedin'
-            cursor.execute(f"SELECT * FROM Social WHERE Site = '{site}'")
+            cursor.execute(f"SELECT * FROM Career WHERE Site = '{site}'")
             linkedin_table = PrettyTable()
             linkedin_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
 
@@ -238,12 +341,25 @@ class mail:
     # Yahoo Class
     class yahoo:
         def insert_yahoo(self):
+            m_engine = pyttsx3.init()
             site = 'yahoo'
-            print("Insert a new yahoo mail . . .\n")
+            m_engine.say(f"Insert a new {site} mail")
+            m_engine.runAndWait()
+            print(f"Insert a new {site} mail . . .\n")
+            m_engine.say(f"what is your {site} first name")
+            m_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            m_engine.say(f"what is your {site} last name")
+            m_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            m_engine.say(f"what is your {site} username")
+            m_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            m_engine.say(f"what is your {site} password")
+            m_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
+            m_engine.say(f"what is your {site} phone")
+            m_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
 
             cursor.execute(
@@ -251,6 +367,8 @@ class mail:
 
             cnx.commit()
 
+            m_engine.say("done")
+            m_engine.runAndWait()
             print("\nDone !\n")
 
         def show_yahoo(self):
@@ -267,12 +385,25 @@ class mail:
     # Class Gmail
     class gmail:
         def insert_gmail(self):
+            m_engine = pyttsx3.init()
             site = 'gmail'
-            print("Insert a new gmail mail . . .\n")
+            m_engine.say(f"Insert a new {site} mail")
+            m_engine.runAndWait()
+            print(f"Insert a new {site} mail . . .\n")
+            m_engine.say(f"what is your {site} first name")
+            m_engine.runAndWait()
             fname = input(f"What is your {site} first name ? ")
+            m_engine.say(f"what is your {site} last name")
+            m_engine.runAndWait()
             lname = input(f"What is your {site} last name ? ")
+            m_engine.say(f"what is your {site} username")
+            m_engine.runAndWait()
             username = input(f"What is your {site} username ? ")
+            m_engine.say(f"what is your {site} password")
+            m_engine.runAndWait()
             password = getpass(f"What is your {site} password ? ")
+            m_engine.say(f"what is your {site} phone")
+            m_engine.runAndWait()
             phone = input(f"What is your {site} phone ? ")
 
             cursor.execute(
@@ -280,6 +411,8 @@ class mail:
 
             cnx.commit()
 
+            m_engine.say("done")
+            m_engine.runAndWait()
             print("\nDone !\n")
 
         def show_gmail(self):
