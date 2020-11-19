@@ -1,6 +1,6 @@
 Ashley Version 0.0.8
 
-Date : Nov , 19 , 2020
+Date : Nov , 17 , 2020
 
 Last Versions :
     - Create init.py and first classes                                      ->   version 0.0.1
