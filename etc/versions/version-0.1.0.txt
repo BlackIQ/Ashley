@@ -11,6 +11,7 @@ Last Versions :
     - All Class for see everything in special table or the whole database   ->   version 0.0.6
     - Created manual + use getpass + Updated README                         ->   version 0.0.7
     - man , table for career , father class + Update init , Ashley , core   ->   version 0.0.8
+    - make Ashley speakable and fixed version 0.0.8 bugs                    ->   version 0.0.9
+
 
 Updates :
-    - make Ashley speakable and fixed version 0.0.8 bugs
