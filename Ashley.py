@@ -52,6 +52,7 @@ except:
     quit()
 
 # Import Py libs
+from etc.man.man import help
 import Pack.core as core
 
 import pyttsx3
@@ -69,66 +70,68 @@ while True:
 
     # Social ( Insert Part )
     if q == 'new instagram':
-        core.Social.Instagram.insert_instagram()
+        core.insert('instagram', 'Social')
     elif q == 'new twitter':
-        core.Social.Twitter.insert_twitter()
+        core.insert('twitter', 'Social')
     elif q == 'new facebook':
-        core.Social.Facebook.insert_facebook()
-
-    # Career ( Insert Part )
-    elif q == 'new github':
-        core.Career.Github.insert_github()
-    elif q == 'new linkedin':
-        core.Career.Linkedin.insert_linkedin()
-    elif q == 'new sof':
-        core.Career.Stack.insert_stack()
-
-    # Emails ( Insert Part )
-    elif q == "new yahoo":
-        core.Email.Yahoo.insert_yahoo()
-    elif q == "new gmail":
-        core.Email.Gmail.insert_gmail()
+        core.insert('facebook', 'Social')
 
     # Social ( Show Part )
     elif q == 'show instagram':
-        core.Social.Instagram.show_instagram()
+        core.show('instagram', 'Social')
     elif q == 'show twitter':
-        core.Social.Twitter.show_twitter()
+        core.show('twitter', 'Social')
     elif q == 'show facebook':
-        core.Social.Facebook.show_facebook()
-
-    # Career ( Show Part )
-    elif q == 'show github':
-        core.Career.Github.show_github()
-    elif q == 'show linkedin':
-        core.Career.Linkedin.show_linkedin()
-    elif q == 'show sof':
-        core.Career.Stack.show_stack()
-
-    # Emails ( Show Part )
-    elif q == "show yahoo":
-        core.Email.Yahoo.show_yahoo()
-    elif q == "show gmail":
-        core.Email.Gmail.show_gmail()
+        core.show('facebook', 'Social')
 
     # Select Everything in Social
     elif q == "show social":
-        core.All.social()
-    # Select Everything in Emails
-    elif q == "show emails":
-        core.All.emails()
-    # Select Everything in Career
-    elif q == "show career":
-        core.All.career()
+        core.social()
 
-    # Select Everything in Database
-    elif q == "all":
-        core.All.all()
+    # <-----------------------------------------------> #
+
+    # Career ( Insert Part )
+    elif q == 'new github':
+        core.insert('github', 'Career')
+    elif q == 'new linkedin':
+        core.insert('linkedin', 'Career')
+    elif q == 'new sof':
+        core.insert('Stack Over Flow', 'Career')
+
+    # Career ( Show Part )
+    elif q == 'show github':
+        core.show('github', 'Career')
+    elif q == 'show linkedin':
+        core.show('linkedin', 'Career')
+    elif q == 'show sof':
+        core.show('Stack Over Flow', 'Career')
+
+    # Select Everything in Emails
+    elif q == "show career":
+        core.career()
+
+    # <-----------------------------------------------> #
+
+    # Emails ( Insert Part )
+    elif q == "new yahoo":
+        core.mail('yahoo', 'Emails')
+    elif q == "new gmail":
+        core.mail('gmail', 'Emails')
+
+    # Emails ( Show Part )
+    elif q == "show yahoo":
+        core.show_mail('yahoo')
+    elif q == "show gmail":
+        core.show_mail('gmail')
+
+    # Select Everything in Career
+    elif q == "show mails":
+        core.emails()
+
+    # <-----------------------------------------------> #
 
     # Ashley's Manual
     elif q == 'help':
-        from etc.man.man import help
-
         help()
 
     # Exit
