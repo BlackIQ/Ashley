@@ -1,6 +1,6 @@
-Ashley Version 0.1.0
+Ashley Version 0.1.1
 
-Date : Nov , 19 , 2020
+Date : Des , 28 , 2020
 
 Last Versions :
     - Create init.py and first classes                                      ->   version 0.0.1
@@ -12,7 +12,7 @@ Last Versions :
     - Created manual + use getpass + Updated README                         ->   version 0.0.7
     - man , table for career , father class + Update init , Ashley , core   ->   version 0.0.8
     - make Ashley speakable and fixed version 0.0.8 bugs                    ->   version 0.0.9
-
+    - Fixed Some Bugs                                                       ->   version 0.1.0
 
 Updates :
-    - Fixed Some Bugs
+    - Make Core.py so light

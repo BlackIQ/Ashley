@@ -5,12 +5,12 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.0                        |
+| Verson : 0.1.1                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 18 , Nov , 2020         |
+| Last Update : 28 , Des , 2020         |
 +---------------------------------------+
 
 """

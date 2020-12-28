@@ -3,8 +3,8 @@
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.0.9</b></sup></p>
-    <p>Last Update : <b>Nov , 18 , 2020</b></p>
+    <p><b>Ashley</b> Version <sup><b>0.1.1</b></sup></p>
+    <p>Last Update : <b>Des , 28 , 2020</b></p>
     <hr>
     <h2>Requirements ?</h2>
     <p>Well 1<sup>st</sup> , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
