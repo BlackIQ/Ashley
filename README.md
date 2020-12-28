@@ -25,7 +25,7 @@
     <br>
     <code>> CREATE USER 'Ashley'@'localhost' IDENTIFIED BY 'Ashley';</code>
     <br>
-    <code>> GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';</code>
+    <code>> GRANT ALL PRIVILEGES ON *.* TO 'Ashley'@'localhost';</code>
     <br>
     <code>> FLUSH PRIVILEGES;</code>
     <br>
