@@ -5,12 +5,12 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.0                        |
+| Verson : 0.1.2                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 18 , Nov , 2020         |
+| Last Update : 30 , Des , 2020         |
 +---------------------------------------+
 
 """
@@ -50,10 +50,6 @@ def w():
     file.write(f"database = 'Ashley'")
     file.close()
 
-
-# Run write in file function
-w()
-
 engine.say("Initialising")
 print("\nInitialising . . .\n")
 engine.runAndWait()
@@ -84,6 +80,9 @@ cursor.execute(
     'CREATE TABLE IF NOT EXISTS `Career` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
 
 cnx.close()
+
+# Run write in file function
+w()
 
 engine.say("Writing in the file")
 print("Writing in the file . . .\n")
