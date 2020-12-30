@@ -2,4 +2,7 @@ Ashley Version 0.0.1
 
 Date : 4 , Nov , 2020
 
-- Create init.py and first classes
+Updates :
+    - version 0.0.1
+    Create init.py
+    Program first classes

@@ -1,6 +1,6 @@
-Ashley Version 0.0.8
+Ashley Version 0.1.2
 
-Date : Nov , 16 , 2020
+Date : Des , 30 , 2020
 
 Last Versions :
     - version 0.0.1
@@ -31,7 +31,6 @@ Last Versions :
     Use getpass
     Updated README
 
-Updates :
     - version 0.0.8
    Update man
    Create table for career
@@ -39,3 +38,21 @@ Updates :
    Update init
    Update Ashley
    Update core
+
+    - version 0.0.9
+    Use pyttsx3 module
+    Make Ashley speakable
+    Fixed last versions bugs
+
+    - version 0.1.0
+    Fixed Some Bugs
+
+    - version 0.1.1
+    Make Core.py so light
+    Update Ashley
+
+Updates :
+    - version 0.1.2
+    Update God-View as Category
+    Update Ashley ( Use pyttsx3 for exit command )
+    Update README

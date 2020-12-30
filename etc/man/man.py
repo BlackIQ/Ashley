@@ -76,4 +76,5 @@ def help():
     print("| Help :                                                                                                 |")
     print("|     command :  help  =>  { To see the manual of Ashley }                                               |")
     print("+--------------------------------------------------------------------------------------------------------+")
-    print("\n")
+    input("\nDid you Read ? Just Enter :)")
+    os.system("clear")

@@ -3,10 +3,23 @@ Ashley Version 0.0.5
 Date : 12 , Nov , 2020
 
 Last Versions :
-    - Create init.py and first classes                                      ->   version 0.0.1
-    - Show Insert & Twitter & Facebook + Update init.py                     ->   version 0.0.2
-    - Added Linkedin & Stack Over Flow classes                              ->   version 0.0.3
-    - Added Ashley core                                                     ->   version 0.0.4
+    - version 0.0.1
+    Create init.py
+    Program first classes
+
+    - version 0.0.2
+    Create Show functions
+    Create Insert functions
+    Update Twitter & Facebook classes
+    Update init.py
+
+    - version 0.0.3
+    Add Linkedin & Stack Over Flow classes
+
+    - version 0.0.4
+    Add Ashley core
+    Put everything in Ashley Core
 
 Updates :
-    - Added Email Classes for save emails data
+    - version 0.0.5
+    Add Email Classes to save email accounts

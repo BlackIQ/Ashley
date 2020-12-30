@@ -68,78 +68,86 @@ while True:
 
     # Switching !
 
+    # <-----------------------------------------------> #
+
     # Social ( Insert Part )
     if q == 'new instagram':
-        core.insert('instagram', 'Social')
+        core.do('insert', 'instagram', 'Social')
     elif q == 'new twitter':
-        core.insert('twitter', 'Social')
+        core.do('insert', 'twitter', 'Social')
     elif q == 'new facebook':
-        core.insert('facebook', 'Social')
+        core.do('insert', 'facebook', 'Social')
 
     # Social ( Show Part )
     elif q == 'show instagram':
-        core.show('instagram', 'Social')
+        core.do('select', 'instagram', 'Social')
     elif q == 'show twitter':
-        core.show('twitter', 'Social')
+        core.do('select', 'twitter', 'Social')
     elif q == 'show facebook':
-        core.show('facebook', 'Social')
+        core.do('select', 'facebook', 'Social')
 
     # Select Everything in Social
     elif q == "show social":
-        core.social()
+        core.category('other', 'Social')
 
     # <-----------------------------------------------> #
 
     # Career ( Insert Part )
     elif q == 'new github':
-        core.insert('github', 'Career')
+        core.do('insert', 'github', 'Career')
     elif q == 'new linkedin':
-        core.insert('linkedin', 'Career')
+        core.do('insert', 'linkedin', 'Career')
     elif q == 'new sof':
-        core.insert('Stack Over Flow', 'Career')
+        core.do('insert', 'stack over flow', 'Career')
 
     # Career ( Show Part )
     elif q == 'show github':
-        core.show('github', 'Career')
+        core.do('select', 'github', 'Career')
     elif q == 'show linkedin':
-        core.show('linkedin', 'Career')
+        core.do('select', 'linkedin', 'Career')
     elif q == 'show sof':
-        core.show('Stack Over Flow', 'Career')
+        core.do('select', 'stack over flow', 'Career')
 
     # Select Everything in Emails
     elif q == "show career":
-        core.career()
+        core.category('other', 'Career')
 
     # <-----------------------------------------------> #
 
     # Emails ( Insert Part )
     elif q == "new yahoo":
-        core.mail('yahoo', 'Emails')
+        core.mail('insert', 'yahoo')
     elif q == "new gmail":
-        core.mail('gmail', 'Emails')
+        core.mail('insert', 'gmail')
 
     # Emails ( Show Part )
     elif q == "show yahoo":
-        core.show_mail('yahoo')
+        core.mail('select', 'yahoo')
     elif q == "show gmail":
-        core.show_mail('gmail')
+        core.mail('select', 'gmail')
 
     # Select Everything in Career
     elif q == "show mails":
-        core.emails()
+        core.category('mail', 'Emails')
 
     # <-----------------------------------------------> #
 
     # Ashley's Manual
     elif q == 'help':
+        a_engine.say("User manual")
+        a_engine.runAndWait()
         help()
 
     # Exit
     elif q == 'exit':
+        a_engine.say("User manual")
         print("Bye !")
+        a_engine.runAndWait()
         core.cnx.close()
         quit()
 
     else:
+        a_engine.say("I didn't get that !")
         print("I didn't get that !\n")
+        a_engine.runAndWait()
         pass
