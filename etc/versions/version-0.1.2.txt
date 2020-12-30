@@ -56,3 +56,6 @@ Updates :
     Update God-View as Category
     Update Ashley ( Use pyttsx3 for exit command )
     Update README
+    Ashley checks user enter a valid database data
+    Update Init
+    Move write fumction near end of the Init

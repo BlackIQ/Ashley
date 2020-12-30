@@ -37,6 +37,9 @@ except:
     engine.runAndWait()
     ask = input('[y , n] : ')
     if ask == 'y':
+        engine.say("")
+        print("Running init .")
+        engine.runAndWait()
         os.system('python3 Pack/init.py')
         try:
             from Pack.status import status
@@ -44,9 +47,12 @@ except:
             if status == True:
                 pass
         except:
+            engine.say("You entered wrong information")
+            print("You entered wrong information .")
+            engine.runAndWait()
             quit()
     else:
-        os.system("exit")
+        quit()
     engine.say("ok , done")
     print("ok , done !")
     engine.runAndWait()
