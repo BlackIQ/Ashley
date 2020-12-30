@@ -140,14 +140,14 @@ while True:
 
     # Exit
     elif q == 'exit':
-        a_engine.say("User manual")
+        a_engine.say("Bye !")
         print("Bye !")
         a_engine.runAndWait()
         core.cnx.close()
         quit()
 
     else:
-        a_engine.say("I didn't get that !")
+        a_engine.say("I did not get that !")
         print("I didn't get that !\n")
         a_engine.runAndWait()
         pass
