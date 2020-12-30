@@ -38,6 +38,13 @@ except:
     ask = input('[y , n] : ')
     if ask == 'y':
         os.system('python3 Pack/init.py')
+        try:
+            from Pack.status import status
+
+            if status == True:
+                pass
+        except:
+            quit()
     else:
         os.system("exit")
     engine.say("ok , done")
