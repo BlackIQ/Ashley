@@ -109,16 +109,6 @@ def category(what, table):
         else:
             pass
 
-    elif what == "mail":
-        cursor.execute(f"SELECT * FROM {table}")
-        emails_table = PrettyTable()
-        emails_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Site"]
-
-        for (fname, lname, username, password, phone, site) in cursor:
-            emails_table.add_row([fname, lname, username, password, phone, site])
-
-        print(colored(emails_table, 'magenta'))
-
 
 def mail(job, site):
     if job == "insert":
