@@ -117,7 +117,7 @@ def category(what, table):
         for (fname, lname, username, password, phone, site) in cursor:
             emails_table.add_row([fname, lname, username, password, phone, site])
 
-        print(colored(emails_table, 'purple'))
+        print(colored(emails_table, 'magenta'))
 
 
 def mail(job, site):
