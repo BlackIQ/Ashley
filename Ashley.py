@@ -70,15 +70,21 @@ import Pack.core as core
 from Pack.status import name as n
 
 import pyttsx3
+from random import choice
+from termcolor import colored
 
 a_engine = pyttsx3.init()
+
+colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'grey', 'yellow']
 
 # Main loop
 while True:
     # Input
+    color = choice(colors)
+
     a_engine.say(f"What you wanna do {n}")
     a_engine.runAndWait()
-    q = input(f"What you wanna do {n} ? ")
+    q = input(colored(f"What you wanna do {n} ? ", color))
 
     # Switching !
 

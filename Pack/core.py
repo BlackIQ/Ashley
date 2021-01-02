@@ -46,27 +46,34 @@ engine.runAndWait()
 def do(job, site, table):
     if job == "insert":
         s_engine = pyttsx3.init()
+
         s_engine.say(f"Insert a new {site} account")
-        print(f"Insert a new {site} account . . .\n")
         s_engine.runAndWait()
+        print(colored(f"Insert a new {site} account . . .\n", 'yellow'))
+
         s_engine.say(f"What is your {site} first name")
         s_engine.runAndWait()
-        fname = input(f"What is your {site} first name ? ")
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
+
         s_engine.say(f"What is your {site} last name")
         s_engine.runAndWait()
-        lname = input(f"What is your {site} last name ? ")
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
+
         s_engine.say(f"What is your {site} email")
         s_engine.runAndWait()
-        email = input(f"What is your {site} email ? ")
+        email = input(colored(f"What is your {site} email ? ", "yellow"))
+
         s_engine.say(f"What is your {site} phone")
         s_engine.runAndWait()
-        phone = input(f"What is your {site} phone ? ")
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
+
         s_engine.say(f"What is your {site} username")
         s_engine.runAndWait()
-        username = input(f"What is your {site} username ? ")
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
+
         s_engine.say(f"What is your {site} password")
         s_engine.runAndWait()
-        password = getpass(f"What is your {site} password ? ")
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
 
         cursor.execute(
             f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -75,7 +82,7 @@ def do(job, site, table):
 
         s_engine.say("Done")
         s_engine.runAndWait()
-        print("\nDone !\n")
+        print(colored("\nDone !\n", "yellow"))
 
     elif job == "select":
         cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
