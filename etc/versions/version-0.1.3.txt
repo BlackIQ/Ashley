@@ -68,3 +68,4 @@ Updates :
     Add " Clear " command
     Ashley gets name now
     Get information colorful
+    Create Check File
