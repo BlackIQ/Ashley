@@ -127,6 +127,11 @@ while True:
         core.cnx.close()
         quit()
 
+    elif q == "clear":
+        a_engine.say("Clearing the screen")
+        a_engine.runAndWait()
+        system("clear")
+
     else:
         a_engine.say("I did not get that !")
         print(colored("I didn't get that !\n", color))
