@@ -67,3 +67,4 @@ Updates :
     Use random for select color
     Add " Clear " command
     Ashley gets name now
+    Get information colorful

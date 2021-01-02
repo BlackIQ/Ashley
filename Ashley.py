@@ -76,6 +76,11 @@ from termcolor import colored
 a_engine = pyttsx3.init()
 
 colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'grey', 'yellow']
+color = choice(colors)
+
+a_engine.say("Welcome")
+a_engine.runAndWait()
+print(colored("Welcome !\n", color))
 
 # Main loop
 while True:
@@ -161,13 +166,13 @@ while True:
     # Exit
     elif q == 'exit':
         a_engine.say("Bye !")
-        print("Bye !")
+        print(colored("Bye !", color))
         a_engine.runAndWait()
         core.cnx.close()
         quit()
 
     else:
         a_engine.say("I did not get that !")
-        print("I didn't get that !\n")
+        print(colored("I didn't get that !\n", color))
         a_engine.runAndWait()
         pass

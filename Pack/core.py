@@ -33,15 +33,8 @@ cnx = mysql.connector.connect(
     database=database
 )
 
-engine = pyttsx3.init()
-
 # Make a cursor
 cursor = cnx.cursor()
-
-engine.say("Welcome")
-print("Welcome !\n")
-engine.runAndWait()
-
 
 def do(job, site, table):
     if job == "insert":
