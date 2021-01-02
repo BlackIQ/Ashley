@@ -37,7 +37,7 @@ except:
     engine.runAndWait()
     ask = input('[y , n] : ')
     if ask == 'y':
-        engine.say("")
+        engine.say("Runnung init")
         print("Running init .")
         engine.runAndWait()
         os.system('python3 Pack/init.py')
@@ -67,6 +67,7 @@ except:
 # Import Py libs
 from etc.man.man import help
 import Pack.core as core
+from Pack.status import name as n
 
 import pyttsx3
 
@@ -75,9 +76,9 @@ a_engine = pyttsx3.init()
 # Main loop
 while True:
     # Input
-    a_engine.say("What you wanna insert")
+    a_engine.say(f"What you wanna da {n}")
     a_engine.runAndWait()
-    q = input("What you wanna insert !? ")
+    q = input(f"What you wanna do {n} ? ")
 
     # Switching !
 

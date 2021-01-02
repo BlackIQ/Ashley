@@ -32,13 +32,18 @@ engine.runAndWait()
 engine.say("Your MySQL Host")
 engine.runAndWait()
 host = input("Your MySQL Host ? ")
+
 engine.say("Your MySQL User")
 engine.runAndWait()
 user = input("Your MySQL User ? ")
+
 engine.say("Your MySQL Password")
 engine.runAndWait()
 password = getpass("Your MySQL Password ? ")
 
+engine.say("Your name")
+engine.runAndWait()
+name = input("Your Name ? ")
 
 # Def Write in file
 def w():
@@ -47,6 +52,7 @@ def w():
     file.write(f"host = '{host}'\n")
     file.write(f"user = '{user}'\n")
     file.write(f"password = '{password}'\n")
+    file.write(f"name = '{name}'\n")
     file.write(f"database = 'Ashley'")
     file.close()
 

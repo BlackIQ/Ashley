@@ -23,6 +23,7 @@ from prettytable import PrettyTable
 from getpass import getpass
 import mysql.connector
 import pyttsx3
+from termcolor import colored
 
 # Start the MySQL connector
 cnx = mysql.connector.connect(
@@ -84,19 +85,29 @@ def do(job, site, table):
         for (fname, lname, email, phone, username, password, site) in cursor:
             outtable.add_row([fname, lname, email, phone, username, password])
 
-        print(outtable)
+        if table == "Social":
+            print(colored(outtable, 'blue'))
+        elif table == "Career":
+            print(colored(outtable, 'green'))
+        else:
+            pass
 
 
 def category(what, table):
     if what == "other":
         cursor.execute(f"SELECT * FROM {table}")
-        outable = PrettyTable()
-        outable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
 
         for (fname, lname, email, phone, username, password, site) in cursor:
-            outable.add_row([fname, lname, email, phone, username, password, site])
+            outtable.add_row([fname, lname, email, phone, username, password, site])
 
-        print(outable)
+        if table == "Social":
+            print(colored(outtable, 'blue'))
+        elif table == "Career":
+            print(colored(outtable, 'green'))
+        else:
+            pass
 
     elif what == "mail":
         cursor.execute(f"SELECT * FROM {table}")
@@ -106,7 +117,7 @@ def category(what, table):
         for (fname, lname, username, password, phone, site) in cursor:
             emails_table.add_row([fname, lname, username, password, phone, site])
 
-        print(emails_table)
+        print(colored(emails_table, 'purple'))
 
 
 def mail(job, site):
@@ -148,4 +159,4 @@ def mail(job, site):
         for (fname, lname, username, password, phone, site) in cursor:
             outtable.add_row([fname, lname, username, password, phone])
 
-        print(outtable)
+        print(colored(outtable, 'magenta'))
