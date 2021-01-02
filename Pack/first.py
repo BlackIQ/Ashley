@@ -15,6 +15,10 @@
 
 """
 
+from termcolor import colored
+import pyttsx3
+import os
+
 def check():
     # Import user's data
     try:
@@ -25,21 +29,18 @@ def check():
 
     # If Not
     except:
-        import pyttsx3
-        import os
-
         engine = pyttsx3.init()
 
         engine.say("Ashley database is not set")
-        print("Ashley database is not set .")
+        print(colored("Ashley database is not set .", "magenta"))
         engine.runAndWait()
         engine.say("do yo want to install")
-        print("do yo want to install ?")
+        print(colored("do yo want to install ?", "magenta"))
         engine.runAndWait()
-        ask = input('[y , n] : ')
+        ask = input(colored('[y , n] : ', "yellow"))
         if ask == 'y':
             engine.say("Runnung init")
-            print("Running init .")
+            print(colored("\nRunning init .", "blue"))
             engine.runAndWait()
             os.system('python3 Pack/init.py')
             try:
@@ -49,18 +50,17 @@ def check():
                     pass
             except:
                 engine.say("You entered wrong information")
-                print("You entered wrong information .")
+                print(colored("You entered wrong information .", "red"))
                 engine.runAndWait()
                 quit()
         else:
             quit()
         engine.say("ok , done")
-        print("ok , done !")
+        print(colored("ok , done !", "green"))
         engine.runAndWait()
-        os.system("clear")
 
-        engine.say("Restart Ashley")
-        print("Restart Ashley !")
+        engine.say("Please restart Ashley")
+        print(colored("Please restart Ashley !", "magenta"))
         engine.runAndWait()
 
         quit()
