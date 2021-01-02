@@ -24,9 +24,10 @@ from Pack.status import name as n
 from etc.man.man import help
 import Pack.core as core
 
-import pyttsx3
-from random import choice
 from termcolor import colored
+from random import choice
+from os import system
+import pyttsx3
 
 a_engine = pyttsx3.init()
 
