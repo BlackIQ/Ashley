@@ -113,33 +113,39 @@ def category(what, table):
 def mail(job, site):
     if job == "insert":
         m_engine = pyttsx3.init()
+
         m_engine.say(f"Insert a new {site} mail")
         m_engine.runAndWait()
         print(f"Insert a new {site} mail . . .\n")
-        m_engine.say(f"what is your {site} first name")
+
+        m_engine.say(f"What is your {site} first name")
         m_engine.runAndWait()
-        fname = input(f"What is your {site} first name ? ")
-        m_engine.say(f"what is your {site} last name")
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
+
+        m_engine.say(f"What is your {site} last name")
         m_engine.runAndWait()
-        lname = input(f"What is your {site} last name ? ")
-        m_engine.say(f"what is your {site} username")
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
+
+        m_engine.say(f"What is your {site} phone")
         m_engine.runAndWait()
-        username = input(f"What is your {site} username ? ")
-        m_engine.say(f"what is your {site} password")
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
+
+        m_engine.say(f"What is your {site} username")
         m_engine.runAndWait()
-        password = getpass(f"What is your {site} password ? ")
-        m_engine.say(f"what is your {site} phone")
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
+
+        m_engine.say(f"What is your {site} password")
         m_engine.runAndWait()
-        phone = input(f"What is your {site} phone ? ")
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
 
         cursor.execute(
             f"INSERT INTO Emails VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
 
         cnx.commit()
 
-        m_engine.say("done")
+        m_engine.say("Done")
         m_engine.runAndWait()
-        print("\nDone !\n")
+        print(colored("\nDone !\n", "yellow"))
 
     elif job == "select":
         cursor.execute(f"SELECT * FROM Emails WHERE Site = '{site}'")
