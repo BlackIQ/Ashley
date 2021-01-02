@@ -76,7 +76,7 @@ a_engine = pyttsx3.init()
 # Main loop
 while True:
     # Input
-    a_engine.say(f"What you wanna da {n}")
+    a_engine.say(f"What you wanna do {n}")
     a_engine.runAndWait()
     q = input(f"What you wanna do {n} ? ")
 
