@@ -1,7 +1,7 @@
 def check():
     # Import user's data
     try:
-        from status import status
+        from Pack.status import status
 
         if status == True:
             pass
@@ -24,9 +24,9 @@ def check():
             engine.say("Runnung init")
             print("Running init .")
             engine.runAndWait()
-            os.system('python3 init.py')
+            os.system('python3 Pack/init.py')
             try:
-                from status import status
+                from Pack.status import status
 
                 if status == True:
                     pass
