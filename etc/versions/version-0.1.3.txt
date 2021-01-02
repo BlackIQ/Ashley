@@ -69,3 +69,4 @@ Updates :
     Ashley gets name now
     Get information colorful
     Create Check File
+    Colorized init and check
