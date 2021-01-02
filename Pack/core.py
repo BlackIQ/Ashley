@@ -116,7 +116,7 @@ def mail(job, site):
 
         m_engine.say(f"Insert a new {site} mail")
         m_engine.runAndWait()
-        print(f"Insert a new {site} mail . . .\n")
+        print(colored(f"Insert a new {site} mail . . .\n", "yellow"))
 
         m_engine.say(f"What is your {site} first name")
         m_engine.runAndWait()
