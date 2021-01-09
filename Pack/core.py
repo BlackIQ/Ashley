@@ -156,3 +156,9 @@ def mail(job, site):
             outtable.add_row([fname, lname, username, password, phone])
 
         print(colored(outtable, 'magenta'))
+
+def costume(what , site):
+    if what == "insert":
+        print("Insert .")
+    if what == "select":
+        print("Select .")
