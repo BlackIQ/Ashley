@@ -46,6 +46,7 @@ engine.say("Your name")
 engine.runAndWait()
 name = input(colored("Your Name ? ", "green"))
 
+
 # Def Write in file
 def w():
     file = open('Pack/status.py', 'w')
@@ -56,6 +57,7 @@ def w():
     file.write(f"name = '{name}'\n")
     file.write(f"database = 'Ashley'")
     file.close()
+
 
 engine.say("Initialising")
 print(colored("\nInitialising . . .\n", "cyan"))
@@ -85,6 +87,8 @@ cursor.execute(
     'CREATE TABLE IF NOT EXISTS `Emails` (Fname TEXT , Lname TEXT , Username TEXT , Password TEXT , Phone TEXT , Site TEXT)')
 cursor.execute(
     'CREATE TABLE IF NOT EXISTS `Career` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
+cursor.execute(
+    'CREATE TABLE IF NOT Costume `Social` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
 
 cnx.close()
 
