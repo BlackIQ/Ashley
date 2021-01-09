@@ -73,7 +73,7 @@ while True:
 
     # Select Everything in Social
     elif q == "show social":
-        core.category('other', 'Social')
+        core.category('Social')
 
     # <-----------------------------------------------> #
 
@@ -93,9 +93,9 @@ while True:
     elif q == 'show sof':
         core.do('select', 'stack over flow', 'Career')
 
-    # Select Everything in Emails
+    # Select Everything in Career
     elif q == "show career":
-        core.category('other', 'Career')
+        core.category('Career')
 
     # <-----------------------------------------------> #
 
@@ -111,9 +111,23 @@ while True:
     elif q == "show gmail":
         core.mail('select', 'gmail')
 
-    # Select Everything in Career
+    # Select Everything in Emails
     elif q == "show mails":
-        core.category('mail', 'Emails')
+        core.mail('all', None)
+
+    # <-----------------------------------------------> #
+
+    # Social ( Insert Part )
+    if q == 'new costume':
+        core.costume('insert', 'Costume')
+
+    # Social ( Show Part )
+    # elif q == 'show ':
+    #     core.costume('select', 'costume')
+
+    # Select Everything in Social
+    elif q == "show costume":
+        core.category('other', 'Social')
 
     # <-----------------------------------------------> #
 

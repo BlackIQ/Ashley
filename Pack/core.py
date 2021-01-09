@@ -93,21 +93,22 @@ def do(job, site, table):
             pass
 
 
-def category(what, table):
-    if what == "other":
-        cursor.execute(f"SELECT * FROM {table}")
-        outtable = PrettyTable()
-        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+def category(table):
+    cursor.execute(f"SELECT * FROM {table}")
+    outtable = PrettyTable()
+    outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
 
-        for (fname, lname, email, phone, username, password, site) in cursor:
-            outtable.add_row([fname, lname, email, phone, username, password, site])
+    for (fname, lname, email, phone, username, password, site) in cursor:
+        outtable.add_row([fname, lname, email, phone, username, password, site])
 
-        if table == "Social":
-            print(colored(outtable, 'blue'))
-        elif table == "Career":
-            print(colored(outtable, 'green'))
-        else:
-            pass
+    if table == "Social":
+        print(colored(outtable, 'blue'))
+    elif table == "Career":
+        print(colored(outtable, 'green'))
+    elif table == "Costume":
+        print(colored(outtable, 'yellow'))
+    else:
+        pass
 
 
 def mail(job, site):
@@ -154,6 +155,16 @@ def mail(job, site):
 
         for (fname, lname, username, password, phone, site) in cursor:
             outtable.add_row([fname, lname, username, password, phone])
+
+        print(colored(outtable, 'magenta'))
+
+    elif job == "all":
+        cursor.execute(f"SELECT * FROM Emails")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Service"]
+
+        for (fname, lname, username, password, phone, site) in cursor:
+            outtable.add_row([fname, lname, username, password, phone, site])
 
         print(colored(outtable, 'magenta'))
 
