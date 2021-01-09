@@ -35,8 +35,11 @@ a_engine = pyttsx3.init()
 colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'grey', 'yellow']
 color = choice(colors)
 
+system("clear")
+
 a_engine.say("Welcome")
 a_engine.runAndWait()
+
 print(colored("Welcome !\n", color))
 
 # Main loop
