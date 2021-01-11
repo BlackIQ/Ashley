@@ -38,36 +38,41 @@ cursor = cnx.cursor()
 
 
 def do(job, site, table):
+    if table == "Social":
+        color = "blue"
+    elif table == "Career":
+        color = "green"
+
     if job == "insert":
         s_engine = pyttsx3.init()
 
         s_engine.say(f"Insert a new {site} account")
         s_engine.runAndWait()
-        print(colored(f"Insert a new {site} account . . .\n", 'yellow'))
+        print(colored(f"Insert a new {site} account . . .\n", color))
 
         s_engine.say(f"What is your {site} first name")
         s_engine.runAndWait()
-        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
+        fname = input(colored(f"What is your {site} first name ? ", color))
 
         s_engine.say(f"What is your {site} last name")
         s_engine.runAndWait()
-        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
+        lname = input(colored(f"What is your {site} last name ? ", color))
 
         s_engine.say(f"What is your {site} email")
         s_engine.runAndWait()
-        email = input(colored(f"What is your {site} email ? ", "yellow"))
+        email = input(colored(f"What is your {site} email ? ", color))
 
         s_engine.say(f"What is your {site} phone")
         s_engine.runAndWait()
-        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
+        phone = input(colored(f"What is your {site} phone ? ", color))
 
         s_engine.say(f"What is your {site} username")
         s_engine.runAndWait()
-        username = input(colored(f"What is your {site} username ? ", "yellow"))
+        username = input(colored(f"What is your {site} username ? ", color))
 
         s_engine.say(f"What is your {site} password")
         s_engine.runAndWait()
-        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
+        password = getpass(colored(f"What is your {site} password ? ", color))
 
         cursor.execute(
             f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
@@ -87,9 +92,9 @@ def do(job, site, table):
             outtable.add_row([fname, lname, email, phone, username, password])
 
         if table == "Social":
-            print(colored(outtable, 'blue'))
+            print(colored(outtable, color))
         elif table == "Career":
-            print(colored(outtable, 'green'))
+            print(colored(outtable, color))
         else:
             pass
 
@@ -172,7 +177,56 @@ def mail(job, site):
 
 def costume(job, site):
     if job == "insert":
-        print("Insert new costume . . .")
+        c_engine = pyttsx3.init()
+
+        c_engine.say(f"Insert a new {site} account")
+        c_engine.runAndWait()
+        print(colored(f"Insert a new {site} account . . .\n", ''))
+
+        c_engine.say(f"What is your {site} first name")
+        c_engine.runAndWait()
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
+
+        c_engine.say(f"What is your {site} last name")
+        c_engine.runAndWait()
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
+
+        c_engine.say(f"What is your {site} email")
+        c_engine.runAndWait()
+        email = input(colored(f"What is your {site} email ? ", "yellow"))
+
+        c_engine.say(f"What is your {site} phone")
+        c_engine.runAndWait()
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
+
+        c_engine.say(f"What is your {site} username")
+        c_engine.runAndWait()
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
+
+        c_engine.say(f"What is your {site} password")
+        c_engine.runAndWait()
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
+
+        cursor.execute(
+            f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+
+        cnx.commit()
+
+        s_engine.say("Done")
+        s_engine.runAndWait()
+        print(colored("\nDone !\n", "yellow"))
 
     elif job == "select":
-        print("Select a costume . . .")
+        cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            outtable.add_row([fname, lname, email, phone, username, password])
+
+        if table == "Social":
+            print(colored(outtable, 'blue'))
+        elif table == "Career":
+            print(colored(outtable, 'green'))
+        else:
+            pass
