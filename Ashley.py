@@ -5,141 +5,136 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.1                        |
+| Verson : 0.1.3                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 28 , Des , 2020         |
+| Last Update : 2 , Jan , 2021          |
 +---------------------------------------+
 
 """
 
-# Import user's data
-try:
-    from Pack.status import status
+# Import Check
+import Pack.first as check
 
-    if status == True:
-        pass
-
-# If Not
-except:
-    import pyttsx3
-    import os
-
-    engine = pyttsx3.init()
-
-    engine.say("Ashley database is not set")
-    print("Ashley database is not set .")
-    engine.runAndWait()
-    engine.say("do yo want to install")
-    print("do yo want to install ?")
-    engine.runAndWait()
-    ask = input('[y , n] : ')
-    if ask == 'y':
-        os.system('python3 Pack/init.py')
-    else:
-        os.system("exit")
-    engine.say("ok , done")
-    print("ok , done !")
-    engine.runAndWait()
-    os.system("clear")
-
-    engine.say("Restart Ashley")
-    print("Restart Ashley !")
-    engine.runAndWait()
-
-    quit()
+check.check()
 
 # Import Py libs
+from Pack.status import name as n
 from etc.man.man import help
 import Pack.core as core
 
+from termcolor import colored
+from random import choice
+from os import system
 import pyttsx3
 
 a_engine = pyttsx3.init()
 
+colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'grey', 'yellow']
+color = choice(colors)
+
+a_engine.say("Welcome")
+a_engine.runAndWait()
+print(colored("Welcome !\n", color))
+
 # Main loop
 while True:
     # Input
-    a_engine.say("What you wanna insert")
+    color = choice(colors)
+
+    a_engine.say(f"What you wanna do {n}")
     a_engine.runAndWait()
-    q = input("What you wanna insert !? ")
+    q = input(colored(f"What you wanna do {n} ? ", color))
 
     # Switching !
 
+    # <-----------------------------------------------> #
+
     # Social ( Insert Part )
     if q == 'new instagram':
-        core.insert('instagram', 'Social')
+        core.do('insert', 'instagram', 'Social')
     elif q == 'new twitter':
-        core.insert('twitter', 'Social')
+        core.do('insert', 'twitter', 'Social')
     elif q == 'new facebook':
-        core.insert('facebook', 'Social')
+        core.do('insert', 'facebook', 'Social')
 
     # Social ( Show Part )
     elif q == 'show instagram':
-        core.show('instagram', 'Social')
+        core.do('select', 'instagram', 'Social')
     elif q == 'show twitter':
-        core.show('twitter', 'Social')
+        core.do('select', 'twitter', 'Social')
     elif q == 'show facebook':
-        core.show('facebook', 'Social')
+        core.do('select', 'facebook', 'Social')
 
     # Select Everything in Social
     elif q == "show social":
-        core.social()
+        core.category('other', 'Social')
 
     # <-----------------------------------------------> #
 
     # Career ( Insert Part )
     elif q == 'new github':
-        core.insert('github', 'Career')
+        core.do('insert', 'github', 'Career')
     elif q == 'new linkedin':
-        core.insert('linkedin', 'Career')
+        core.do('insert', 'linkedin', 'Career')
     elif q == 'new sof':
-        core.insert('Stack Over Flow', 'Career')
+        core.do('insert', 'stack over flow', 'Career')
 
     # Career ( Show Part )
     elif q == 'show github':
-        core.show('github', 'Career')
+        core.do('select', 'github', 'Career')
     elif q == 'show linkedin':
-        core.show('linkedin', 'Career')
+        core.do('select', 'linkedin', 'Career')
     elif q == 'show sof':
-        core.show('Stack Over Flow', 'Career')
+        core.do('select', 'stack over flow', 'Career')
 
     # Select Everything in Emails
     elif q == "show career":
-        core.career()
+        core.category('other', 'Career')
 
     # <-----------------------------------------------> #
 
     # Emails ( Insert Part )
     elif q == "new yahoo":
-        core.mail('yahoo', 'Emails')
+        core.mail('insert', 'yahoo')
     elif q == "new gmail":
-        core.mail('gmail', 'Emails')
+        core.mail('insert', 'gmail')
 
     # Emails ( Show Part )
     elif q == "show yahoo":
-        core.show_mail('yahoo')
+        core.mail('select', 'yahoo')
     elif q == "show gmail":
-        core.show_mail('gmail')
+        core.mail('select', 'gmail')
 
     # Select Everything in Career
     elif q == "show mails":
-        core.emails()
+        core.category('mail', 'Emails')
 
     # <-----------------------------------------------> #
 
     # Ashley's Manual
     elif q == 'help':
+        a_engine.say("User manual")
+        a_engine.runAndWait()
         help()
 
     # Exit
     elif q == 'exit':
-        print("Bye !")
+        a_engine.say("Bye !")
+        print(colored("Bye !", color))
+        a_engine.runAndWait()
         core.cnx.close()
         quit()
 
+    elif q == "clear":
+        a_engine.say("Clearing the screen")
+        a_engine.runAndWait()
+        system("clear")
+
     else:
-        print("I didn't get that !\n")
+        a_engine.say("I did not get that !")
+        print(colored("I didn't get that !\n", color))
+        a_engine.runAndWait()
         pass

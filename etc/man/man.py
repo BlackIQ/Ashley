@@ -5,12 +5,12 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.1                        |
+| Verson : 0.1.3                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 28 , Des , 2020         |
+| Last Update : 2 , Jan , 2021          |
 +---------------------------------------+
 
 """
@@ -76,4 +76,5 @@ def help():
     print("| Help :                                                                                                 |")
     print("|     command :  help  =>  { To see the manual of Ashley }                                               |")
     print("+--------------------------------------------------------------------------------------------------------+")
-    print("\n")
+    input("\nDid you Read ? Just Enter :)")
+    os.system("clear")

@@ -1,10 +1,12 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_shield)
+
 <html>
   <body>
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.1.1</b></sup></p>
-    <p>Last Update : <b>Des , 28 , 2020</b></p>
+    <p><b>Ashley</b> Version <sup><b>0.1.3</b></sup></p>
+    <p>Last Update : <b>Jan , 2 , 2021</b></p>
     <hr>
     <h2>Requirements ?</h2>
     <p>Well 1<sup>st</sup> , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
@@ -48,3 +50,6 @@
     <p>Developed with &hearts; by <b><a href="https://github.com/BlackIQ">Amir</a></b> .<p>
   </body>
 </html>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_large)

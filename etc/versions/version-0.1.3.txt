@@ -1,6 +1,6 @@
-Ashley Version 0.0.8
+Ashley Version 0.1.2
 
-Date : Nov , 17 , 2020
+Date : Des , 30 , 2020
 
 Last Versions :
     - version 0.0.1
@@ -39,8 +39,34 @@ Last Versions :
    Update Ashley
    Update core
 
-Updates :
     - version 0.0.9
     Use pyttsx3 module
     Make Ashley speakable
     Fixed last versions bugs
+
+    - version 0.1.0
+    Fixed Some Bugs
+
+    - version 0.1.1
+    Make Core.py so light
+    Update Ashley
+
+    - version 0.1.2
+    Update God-View as Category
+    Update Ashley ( Use pyttsx3 for exit command )
+    Update README
+    Ashley checks user enter a valid database data
+    Update Init
+    Move write fumction near end of the Init
+
+Updates :
+    - version 0.1.3
+    Using Termcolor for show tables
+    Fix input messsage
+    Make input message colorful
+    Use random for select color
+    Add " Clear " command
+    Ashley gets name now
+    Get information colorful
+    Create Check File
+    Colorized init and check

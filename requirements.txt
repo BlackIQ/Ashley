@@ -3,4 +3,5 @@ prettytable==1.0.1
 protobuf==3.13.0
 pyttsx3==2.90
 six==1.15.0
+termcolor==1.1.0
 wcwidth==0.2.5

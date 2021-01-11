@@ -5,12 +5,12 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.1                        |
+| Verson : 0.1.3                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 28 , Des , 2020         |
+| Last Update : 2 , Jan , 2021          |
 +---------------------------------------+
 
 """
@@ -23,6 +23,7 @@ from prettytable import PrettyTable
 from getpass import getpass
 import mysql.connector
 import pyttsx3
+from termcolor import colored
 
 # Start the MySQL connector
 cnx = mysql.connector.connect(
@@ -32,126 +33,126 @@ cnx = mysql.connector.connect(
     database=database
 )
 
-engine = pyttsx3.init()
-
 # Make a cursor
 cursor = cnx.cursor()
 
-engine.say("Welcome")
-print("Welcome !\n\n")
-engine.runAndWait()
+def do(job, site, table):
+    if job == "insert":
+        s_engine = pyttsx3.init()
+
+        s_engine.say(f"Insert a new {site} account")
+        s_engine.runAndWait()
+        print(colored(f"Insert a new {site} account . . .\n", 'yellow'))
+
+        s_engine.say(f"What is your {site} first name")
+        s_engine.runAndWait()
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
+
+        s_engine.say(f"What is your {site} last name")
+        s_engine.runAndWait()
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
+
+        s_engine.say(f"What is your {site} email")
+        s_engine.runAndWait()
+        email = input(colored(f"What is your {site} email ? ", "yellow"))
+
+        s_engine.say(f"What is your {site} phone")
+        s_engine.runAndWait()
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
+
+        s_engine.say(f"What is your {site} username")
+        s_engine.runAndWait()
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
+
+        s_engine.say(f"What is your {site} password")
+        s_engine.runAndWait()
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
+
+        cursor.execute(
+            f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+
+        cnx.commit()
+
+        s_engine.say("Done")
+        s_engine.runAndWait()
+        print(colored("\nDone !\n", "yellow"))
+
+    elif job == "select":
+        cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            outtable.add_row([fname, lname, email, phone, username, password])
+
+        if table == "Social":
+            print(colored(outtable, 'blue'))
+        elif table == "Career":
+            print(colored(outtable, 'green'))
+        else:
+            pass
 
 
-def insert(site, table):
-    s_engine = pyttsx3.init()
-    s_engine.say(f"Insert a new {site} account")
-    print(f"Insert a new {site} account . . .\n")
-    s_engine.runAndWait()
-    s_engine.say(f"What is your {site} first name")
-    s_engine.runAndWait()
-    fname = input(f"What is your {site} first name ? ")
-    s_engine.say(f"What is your {site} last name")
-    s_engine.runAndWait()
-    lname = input(f"What is your {site} last name ? ")
-    s_engine.say(f"What is your {site} email")
-    s_engine.runAndWait()
-    email = input(f"What is your {site} email ? ")
-    s_engine.say(f"What is your {site} phone")
-    s_engine.runAndWait()
-    phone = input(f"What is your {site} phone ? ")
-    s_engine.say(f"What is your {site} username")
-    s_engine.runAndWait()
-    username = input(f"What is your {site} username ? ")
-    s_engine.say(f"What is your {site} password")
-    s_engine.runAndWait()
-    password = getpass(f"What is your {site} password ? ")
+def category(what, table):
+    if what == "other":
+        cursor.execute(f"SELECT * FROM {table}")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
 
-    cursor.execute(
-        f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            outtable.add_row([fname, lname, email, phone, username, password, site])
 
-    cnx.commit()
-
-    s_engine.say("Done")
-    s_engine.runAndWait()
-    print("\nDone !\n")
+        if table == "Social":
+            print(colored(outtable, 'blue'))
+        elif table == "Career":
+            print(colored(outtable, 'green'))
+        else:
+            pass
 
 
-def show(site, table):
-    cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
-    outtable = PrettyTable()
-    outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
+def mail(job, site):
+    if job == "insert":
+        m_engine = pyttsx3.init()
 
-    for (fname, lname, email, phone, username, password, site) in cursor:
-        outtable.add_row([fname, lname, email, phone, username, password])
+        m_engine.say(f"Insert a new {site} mail")
+        m_engine.runAndWait()
+        print(colored(f"Insert a new {site} mail . . .\n", "yellow"))
 
-    print(outtable)
+        m_engine.say(f"What is your {site} first name")
+        m_engine.runAndWait()
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
 
-def social():
-    cursor.execute("SELECT * FROM Social")
-    social_table = PrettyTable()
-    social_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+        m_engine.say(f"What is your {site} last name")
+        m_engine.runAndWait()
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
 
-    for (fname, lname, email, phone, username, password, site) in cursor:
-        social_table.add_row([fname, lname, email, phone, username, password, site])
+        m_engine.say(f"What is your {site} phone")
+        m_engine.runAndWait()
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
 
-    print(social_table)
+        m_engine.say(f"What is your {site} username")
+        m_engine.runAndWait()
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
 
-def career():
-    cursor.execute("SELECT * FROM Career")
-    career_table = PrettyTable()
-    career_table.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+        m_engine.say(f"What is your {site} password")
+        m_engine.runAndWait()
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
 
-    for (fname, lname, email, phone, username, password, site) in cursor:
-        career_table.add_row([fname, lname, email, phone, username, password, site])
+        cursor.execute(
+            f"INSERT INTO Emails VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
 
-    print(career_table)
+        cnx.commit()
 
-def emails():
-    cursor.execute("SELECT * FROM Emails")
-    emails_table = PrettyTable()
-    emails_table.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Site"]
+        m_engine.say("Done")
+        m_engine.runAndWait()
+        print(colored("\nDone !\n", "yellow"))
 
-    for (fname, lname, username, password, phone, site) in cursor:
-        emails_table.add_row([fname, lname, username, password, phone, site])
+    elif job == "select":
+        cursor.execute(f"SELECT * FROM Emails WHERE Site = '{site}'")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Username", "Password", "Phone"]
 
-    print(emails_table)
+        for (fname, lname, username, password, phone, site) in cursor:
+            outtable.add_row([fname, lname, username, password, phone])
 
-def mail(site, table):
-    m_engine = pyttsx3.init()
-    m_engine.say(f"Insert a new {site} mail")
-    m_engine.runAndWait()
-    print(f"Insert a new {site} mail . . .\n")
-    m_engine.say(f"what is your {site} first name")
-    m_engine.runAndWait()
-    fname = input(f"What is your {site} first name ? ")
-    m_engine.say(f"what is your {site} last name")
-    m_engine.runAndWait()
-    lname = input(f"What is your {site} last name ? ")
-    m_engine.say(f"what is your {site} username")
-    m_engine.runAndWait()
-    username = input(f"What is your {site} username ? ")
-    m_engine.say(f"what is your {site} password")
-    m_engine.runAndWait()
-    password = getpass(f"What is your {site} password ? ")
-    m_engine.say(f"what is your {site} phone")
-    m_engine.runAndWait()
-    phone = input(f"What is your {site} phone ? ")
-
-    cursor.execute(
-        f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
-
-    cnx.commit()
-
-    m_engine.say("done")
-    m_engine.runAndWait()
-    print("\nDone !\n")
-
-def show_mail(site):
-    cursor.execute(f"SELECT * FROM Emails WHERE Site = '{site}'")
-    outtable = PrettyTable()
-    outtable.field_names = ["First Name", "Last Name", "Username", "Password", "Phone"]
-
-    for (fname, lname, username, password, phone, site) in cursor:
-        outtable.add_row([fname, lname, username, password, phone])
-
-    print(outtable)
+        print(colored(outtable, 'magenta'))

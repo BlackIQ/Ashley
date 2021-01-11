@@ -5,40 +5,46 @@
 +---------------------------------------+
 | Project Name : Ashley                 |
 | Licence : MIT                         |
-| Verson : 0.1.0                        |
+| Verson : 0.1.3                        |
 |                                       |
 | Developer : Amirhossein Mohammsdi     |
 | Github : github.com/BlackIQ/Ashley    |
 |                                       |
-| Last Update : 18 , Nov , 2020         |
+| Last Update : 2 , Jan , 2021          |
 +---------------------------------------+
 
 """
 
 # Import MySQL
-import mysql.connector
+from termcolor import colored
 from getpass import getpass
+import mysql.connector
 import pyttsx3
 
 engine = pyttsx3.init()
 
-print("\n-------------------------------")
+print(colored("\n-------------------------------", "red"))
 
 engine.say("Welcome to Ashley Init")
-print("Welcome to Ashley Init.py !\n")
+print(colored("Welcome to Ashley Init.py !\n", "cyan"))
 engine.runAndWait()
 
 # Getting data
 engine.say("Your MySQL Host")
 engine.runAndWait()
-host = input("Your MySQL Host ? ")
+host = input(colored("Your MySQL Host ? ", "green"))
+
 engine.say("Your MySQL User")
 engine.runAndWait()
-user = input("Your MySQL User ? ")
+user = input(colored("Your MySQL User ? ", "green"))
+
 engine.say("Your MySQL Password")
 engine.runAndWait()
-password = getpass("Your MySQL Password ? ")
+password = getpass(colored("Your MySQL Password ? ", "green"))
 
+engine.say("Your name")
+engine.runAndWait()
+name = input(colored("Your Name ? ", "green"))
 
 # Def Write in file
 def w():
@@ -47,15 +53,12 @@ def w():
     file.write(f"host = '{host}'\n")
     file.write(f"user = '{user}'\n")
     file.write(f"password = '{password}'\n")
+    file.write(f"name = '{name}'\n")
     file.write(f"database = 'Ashley'")
     file.close()
 
-
-# Run write in file function
-w()
-
 engine.say("Initialising")
-print("\nInitialising . . .\n")
+print(colored("\nInitialising . . .\n", "cyan"))
 engine.runAndWait()
 
 # Start MySQL Connector
@@ -69,7 +72,7 @@ cnx = mysql.connector.connect(
 cursor = cnx.cursor()
 
 engine.say("Executing Queries")
-print("Executing Queries . . .\n")
+print(colored("Executing Queries . . .\n", "cyan"))
 engine.runAndWait()
 
 # Executing and creating tables
@@ -85,12 +88,15 @@ cursor.execute(
 
 cnx.close()
 
+# Run write in file function
+w()
+
 engine.say("Writing in the file")
-print("Writing in the file . . .\n")
+print(colored("Writing in the file . . .\n", "cyan"))
 engine.runAndWait()
 
 engine.say("Done")
-print("Done !")
+print(colored("Done !", "cyan"))
 engine.runAndWait()
 
-print("-------------------------------\n")
+print(colored("-------------------------------\n", "red"))
