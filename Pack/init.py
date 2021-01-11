@@ -88,7 +88,7 @@ cursor.execute(
 cursor.execute(
     'CREATE TABLE IF NOT EXISTS `Career` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
 cursor.execute(
-    'CREATE TABLE IF NOT Costume `Social` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
+    'CREATE TABLE IF NOT EXISTS `Costume` (Fname TEXT , Lname TEXT , Email TEXT , Phone TEXT , Username TEXT , Password TEXT , Site TEXT)')
 
 cnx.close()
 

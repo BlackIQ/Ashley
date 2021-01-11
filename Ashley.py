@@ -32,7 +32,7 @@ import pyttsx3
 
 a_engine = pyttsx3.init()
 
-colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'grey', 'yellow']
+colors = ['red', 'green', 'white', 'blue', 'cyan', 'magenta', 'yellow']
 color = choice(colors)
 
 system("clear")
@@ -114,20 +114,6 @@ while True:
     # Select Everything in Emails
     elif q == "show mails":
         core.mail('all', None)
-
-    # <-----------------------------------------------> #
-
-    # Social ( Insert Part )
-    if q == 'new costume':
-        core.costume('insert', 'Costume')
-
-    # Social ( Show Part )
-    # elif q == 'show ':
-    #     core.costume('select', 'costume')
-
-    # Select Everything in Social
-    elif q == "show costume":
-        core.category('other', 'Social')
 
     # <-----------------------------------------------> #
 
