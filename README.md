@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_shield)
+
 <html>
   <body>
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
@@ -48,3 +50,6 @@
     <p>Developed with &hearts; by <b><a href="https://github.com/BlackIQ">Amir</a></b> .<p>
   </body>
 </html>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_large)
