@@ -36,6 +36,7 @@ cnx = mysql.connector.connect(
 # Make a cursor
 cursor = cnx.cursor()
 
+
 def do(job, site, table):
     if job == "insert":
         s_engine = pyttsx3.init()
@@ -167,3 +168,11 @@ def mail(job, site):
             outtable.add_row([fname, lname, username, password, phone, site])
 
         print(colored(outtable, 'magenta'))
+
+
+def costume(job, site):
+    if job == "insert":
+        print("Insert new costume . . .")
+
+    elif job == "select":
+        print("Select a costume . . .")

@@ -117,6 +117,18 @@ while True:
 
     # <-----------------------------------------------> #
 
+    # Emails ( Insert Part )
+    elif q == "new costume":
+        s = input("What site is your costume ? ")
+        core.costume("insert", s)
+
+    # Emails ( Show Part )
+    elif q == "show costume":
+        s = input("What site is your costume ? ")
+        core.costume("select", s)
+        
+    # <-----------------------------------------------> #
+
     # Ashley's Manual
     elif q == 'help':
         a_engine.say("User manual")
@@ -125,7 +137,7 @@ while True:
 
     # Exit
     elif q == 'exit':
-        a_engine.say("Bye !")
+        a_engine.say("Bye")
         print(colored("Bye !", color))
         a_engine.runAndWait()
         core.cnx.close()
