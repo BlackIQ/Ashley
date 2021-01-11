@@ -177,7 +177,6 @@ def mail(job, site):
 
 def costume(job, site):
     table = "Costume"
-    color = "yellow"
 
     if job == "insert":
         c_engine = pyttsx3.init()
@@ -188,27 +187,27 @@ def costume(job, site):
 
         c_engine.say(f"What is your {site} first name")
         c_engine.runAndWait()
-        fname = input(colored(f"What is your {site} first name ? ", color))
+        fname = input(colored(f"What is your {site} first name ? ", "yellow"))
 
         c_engine.say(f"What is your {site} last name")
         c_engine.runAndWait()
-        lname = input(colored(f"What is your {site} last name ? ", color))
+        lname = input(colored(f"What is your {site} last name ? ", "yellow"))
 
         c_engine.say(f"What is your {site} email")
         c_engine.runAndWait()
-        email = input(colored(f"What is your {site} email ? ", color))
+        email = input(colored(f"What is your {site} email ? ", "yellow"))
 
         c_engine.say(f"What is your {site} phone")
         c_engine.runAndWait()
-        phone = input(colored(f"What is your {site} phone ? ", color))
+        phone = input(colored(f"What is your {site} phone ? ", "yellow"))
 
         c_engine.say(f"What is your {site} username")
         c_engine.runAndWait()
-        username = input(colored(f"What is your {site} username ? ", color))
+        username = input(colored(f"What is your {site} username ? ", "yellow"))
 
         c_engine.say(f"What is your {site} password")
         c_engine.runAndWait()
-        password = getpass(colored(f"What is your {site} password ? ", color))
+        password = getpass(colored(f"What is your {site} password ? ", "yellow"))
 
         cursor.execute(
             f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
