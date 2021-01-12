@@ -126,6 +126,9 @@ while True:
     elif q == "show costume":
         core.costume("select")
 
+    elif q == "show costume -A":
+        core.costume("all")
+
     # <-----------------------------------------------> #
 
     # Ashley's Manual

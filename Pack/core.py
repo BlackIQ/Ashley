@@ -181,11 +181,11 @@ def costume(job):
     table = "Costume"
     color = "yellow"
 
-    c_engine.say("What is your costume site")
-    c_engine.runAndWait()
-    site = input(colored("What is your costume site ? ", color))
-
     if job == "insert":
+        c_engine.say("What is your costume site")
+        c_engine.runAndWait()
+        site = input(colored("What is your costume site ? ", color))
+
         c_engine.say(f"Insert a new {site} account")
         c_engine.runAndWait()
         print(colored(f"Insert a new {site} account . . .\n", color))
@@ -224,11 +224,25 @@ def costume(job):
         print(colored("\nDone !\n", "yellow"))
 
     elif job == "select":
+        c_engine.say("What is your costume site")
+        c_engine.runAndWait()
+        site = input(colored("What is your costume site ? ", color))
+
         cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
         outtable = PrettyTable()
         outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password"]
 
         for (fname, lname, email, phone, username, password, site) in cursor:
             outtable.add_row([fname, lname, email, phone, username, password])
+
+        print(colored(outtable, color))
+
+    elif job == "all":
+        cursor.execute(f"SELECT * FROM {table}")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            outtable.add_row([fname, lname, email, phone, username, password, site])
 
         print(colored(outtable, color))
