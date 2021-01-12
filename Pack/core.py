@@ -175,13 +175,17 @@ def mail(job, site):
         print(colored(outtable, 'magenta'))
 
 
-def costume(job, site):
+def costume(job):
+    c_engine = pyttsx3.init()
+
     table = "Costume"
     color = "yellow"
 
-    if job == "insert":
-        c_engine = pyttsx3.init()
+    c_engine.say("What is your costume site")
+    c_engine.runAndWait()
+    site = input(colored("What is your costume site ? ", color))
 
+    if job == "insert":
         c_engine.say(f"Insert a new {site} account")
         c_engine.runAndWait()
         print(colored(f"Insert a new {site} account . . .\n", color))

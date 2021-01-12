@@ -19,6 +19,9 @@ from termcolor import colored
 import pyttsx3
 import os
 
+def clear():
+    os.system("clear")
+
 def check():
     # Import user's data
     try:

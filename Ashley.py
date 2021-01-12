@@ -18,6 +18,7 @@
 # Import Check
 import Pack.first as check
 
+check.clear()
 check.check()
 
 # Import Py libs
@@ -119,14 +120,12 @@ while True:
 
     # Emails ( Insert Part )
     elif q == "new costume":
-        s = input("What site is your costume ? ")
-        core.costume("insert", s)
+        core.costume("insert")
 
     # Emails ( Show Part )
     elif q == "show costume":
-        s = input("What site is your costume ? ")
-        core.costume("select", s)
-        
+        core.costume("select")
+
     # <-----------------------------------------------> #
 
     # Ashley's Manual
