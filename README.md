@@ -5,12 +5,12 @@
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.1.3</b></sup></p>
-    <p>Last Update : <b>Jan , 2 , 2021</b></p>
+    <p><b>Ashley</b> Version <sup><b>0.1.4</b></sup></p>
+    <p>Last Update : <b>Jan , 12 , 2021</b></p>
     <hr>
     <h2>Requirements ?</h2>
     <p>Well 1<sup>st</sup> , you need to install <b>Python</b> and <b>Pip</b> and <b>Venv</b> on your device .</p>
-    <p>2<sup>nd</sup> , it's required to have <b>MySQL</b> , <b>espeak</b> and <b>ffmpeg</b> too .</p>
+    <p>2<sup>nd</sup> , it's required to have <b>MySQL</b> , <b>espeak</b> , <b>ffmpeg</b> and <b>mpg123</b> too .</p>
     <p>3<sup>rd</sup> There are <b>Python libs</b> on <a href="https://github.com/BlackIQ/Ashley/blob/main/requirements.txt">requirements.txt</a></p>
     <hr>
     <h2>How to install ?</h2>
@@ -46,7 +46,7 @@
     <code>python3 Ashley.py</code>
     <hr>
     <p>For know me better , <b>I am</b> :</p>
-    <p>Daughter of <b><a href="https://github.com/Annahita2004">Anna</a></b> !</p>
+    <p><b>Idea</b> and <b>Name</b> from <b><a href="https://github.com/Annahita2004">Miss.Annahita</a></b> !</p>
     <p>Developed with &hearts; by <b><a href="https://github.com/BlackIQ">Amir</a></b> .<p>
   </body>
 </html>
