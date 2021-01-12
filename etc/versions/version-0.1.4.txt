@@ -78,3 +78,5 @@ Updates :
     Fix show emails
     Fix color variables
     Add clear function to first.py
+    Add " show costume -A " to Ashley
+    Add show all to Core
