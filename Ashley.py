@@ -64,26 +64,23 @@ while True:
     elif q == "show":
         core.do("select")
 
-    elif q == "show costume -A":
+    # Select Everything saved
+    elif q == "show sites":
         core.do("all")
 
     # <-----------------------------------------------> #
 
     # Emails ( Insert Part )
     elif q == "new yahoo":
-        core.mail('insert', 'yahoo')
-    elif q == "new gmail":
-        core.mail('insert', 'gmail')
+        core.mail('insert')
 
     # Emails ( Show Part )
     elif q == "show yahoo":
-        core.mail('select', 'yahoo')
-    elif q == "show gmail":
-        core.mail('select', 'gmail')
+        core.mail('select')
 
     # Select Everything in Emails
     elif q == "show mails":
-        core.mail('all', None)
+        core.mail('all')
 
     # <-----------------------------------------------> #
 
@@ -98,14 +95,15 @@ while True:
         a_engine.say("Bye")
         print(colored("Bye !", color))
         a_engine.runAndWait()
-        core.cnx.close()
         quit()
 
+    # Clear
     elif q == "clear":
         a_engine.say("Clearing the screen")
         a_engine.runAndWait()
         system("clear")
 
+    # Didn't Understand
     else:
         a_engine.say("I did not get that !")
         print(colored("I didn't get that !\n", color))
