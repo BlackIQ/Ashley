@@ -58,14 +58,14 @@ while True:
 
     # Costume ( Insert Part )
     if q == "new":
-        core.costume("insert")
+        core.do("insert")
 
     # Emails ( Show Part )
     elif q == "show":
-        core.costume("select")
+        core.do("select")
 
     elif q == "show costume -A":
-        core.costume("all")
+        core.do("all")
 
     # <-----------------------------------------------> #
 
