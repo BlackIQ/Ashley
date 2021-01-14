@@ -1,0 +1,85 @@
+Ashley Version 0.1.2
+
+Date : Des , 30 , 2020
+
+Last Versions :
+    - version 0.0.1
+    Create init.py
+    Program first classes
+
+    - version 0.0.2
+    Create Show functions
+    Create Insert functions
+    Update Twitter & Facebook classes
+    Update init.py
+
+    - version 0.0.3
+    Add Linkedin & Stack Over Flow classes
+
+    - version 0.0.4
+    Add Ashley core
+    Put everything in Ashley Core
+
+    - version 0.0.5
+    Add Email Classes to save email accounts
+
+    - version 0.0.6
+    Add God-View class to control everything in database
+
+    - version 0.0.7
+    Created user-manual
+    Use getpass
+    Updated README
+
+    - version 0.0.8
+   Update man
+   Create table for career
+   Solve some bugs
+   Update init
+   Update Ashley
+   Update core
+
+    - version 0.0.9
+    Use pyttsx3 module
+    Make Ashley speakable
+    Fixed last versions bugs
+
+    - version 0.1.0
+    Fixed Some Bugs
+
+    - version 0.1.1
+    Make Core.py so light
+    Update Ashley
+
+    - version 0.1.2
+    Update God-View as Category
+    Update Ashley ( Use pyttsx3 for exit command )
+    Update README
+    Ashley checks user enter a valid database data
+    Update Init
+    Move write fumction near end of the Init
+
+    - version 0.1.3
+    Using Termcolor for show tables
+    Fix input messsage
+    Make input message colorful
+    Use random for select color
+    Add " Clear " command
+    Ashley gets name now
+    Get information colorful
+    Create Check File
+    Colorized init and check
+
+    - version 0.1.4
+    Add Costume future
+    Create new table for Costume sites
+    Fix colors for each one
+    Fix show emails
+    Fix color variables
+    Add clear function to first.py
+    Add " show costume -A " to Ashley
+    Add show all to Core
+
+Updates :
+    - version 0.1.5
+    

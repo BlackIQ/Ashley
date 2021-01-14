@@ -56,47 +56,16 @@ while True:
 
     # <-----------------------------------------------> #
 
-    # Social ( Insert Part )
-    if q == 'new instagram':
-        core.do('insert', 'instagram', 'Social')
-    elif q == 'new twitter':
-        core.do('insert', 'twitter', 'Social')
-    elif q == 'new facebook':
-        core.do('insert', 'facebook', 'Social')
+    # Costume ( Insert Part )
+    if q == "new":
+        core.costume("insert")
 
-    # Social ( Show Part )
-    elif q == 'show instagram':
-        core.do('select', 'instagram', 'Social')
-    elif q == 'show twitter':
-        core.do('select', 'twitter', 'Social')
-    elif q == 'show facebook':
-        core.do('select', 'facebook', 'Social')
+    # Emails ( Show Part )
+    elif q == "show":
+        core.costume("select")
 
-    # Select Everything in Social
-    elif q == "show social":
-        core.category('Social')
-
-    # <-----------------------------------------------> #
-
-    # Career ( Insert Part )
-    elif q == 'new github':
-        core.do('insert', 'github', 'Career')
-    elif q == 'new linkedin':
-        core.do('insert', 'linkedin', 'Career')
-    elif q == 'new sof':
-        core.do('insert', 'stack over flow', 'Career')
-
-    # Career ( Show Part )
-    elif q == 'show github':
-        core.do('select', 'github', 'Career')
-    elif q == 'show linkedin':
-        core.do('select', 'linkedin', 'Career')
-    elif q == 'show sof':
-        core.do('select', 'stack over flow', 'Career')
-
-    # Select Everything in Career
-    elif q == "show career":
-        core.category('Career')
+    elif q == "show costume -A":
+        core.costume("all")
 
     # <-----------------------------------------------> #
 
@@ -115,19 +84,6 @@ while True:
     # Select Everything in Emails
     elif q == "show mails":
         core.mail('all', None)
-
-    # <-----------------------------------------------> #
-
-    # Emails ( Insert Part )
-    elif q == "new costume":
-        core.costume("insert")
-
-    # Emails ( Show Part )
-    elif q == "show costume":
-        core.costume("select")
-
-    elif q == "show costume -A":
-        core.costume("all")
 
     # <-----------------------------------------------> #
 
