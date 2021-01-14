@@ -91,7 +91,7 @@ def do(job):
         for (fname, lname, email, phone, username, password, site) in cursor:
             outtable.add_row([fname, lname, email, phone, username, password])
 
-        print(colored(outtable, color))
+        print(colored(outtable, "blue"))
 
     elif job == "all":
         cursor.execute(f"SELECT * FROM {table}")
@@ -101,17 +101,17 @@ def do(job):
         for (fname, lname, email, phone, username, password, site) in cursor:
             outtable.add_row([fname, lname, email, phone, username, password, site])
 
-        print(colored(outtable, color))
+        print(colored(outtable, "blue"))
 
 def mail(job):
     m_engine = pyttsx3.init()
 
-    table = "Costume"
+    table = "Emails"
     color = "yellow"
 
-    m_engine.say("What site")
+    m_engine.say("What service")
     m_engine.runAndWait()
-    site = input(colored("What site ? ", color))
+    site = input(colored("What service ? ", color))
 
     if job == "insert":
         m_engine.say(f"Insert a new {site} mail")
