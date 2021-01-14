@@ -57,11 +57,11 @@ while True:
     # <-----------------------------------------------> #
 
     # Costume ( Insert Part )
-    if q == "new":
+    if q == "new site":
         core.do("insert")
 
     # Emails ( Show Part )
-    elif q == "show":
+    elif q == "show site":
         core.do("select")
 
     # Select Everything saved
@@ -71,11 +71,11 @@ while True:
     # <-----------------------------------------------> #
 
     # Emails ( Insert Part )
-    elif q == "new yahoo":
+    elif q == "new mail":
         core.mail('insert')
 
     # Emails ( Show Part )
-    elif q == "show yahoo":
+    elif q == "show mail":
         core.mail('select')
 
     # Select Everything in Emails
