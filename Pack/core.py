@@ -183,6 +183,8 @@ def do(job):
     c_engine.runAndWait()
     site = input(colored("What site ? ", color))
 
+    site = site.lower()
+
     if job == "insert":
         c_engine.say(f"Insert a new {site} account")
         c_engine.runAndWait()
@@ -258,6 +260,8 @@ def mail(job):
     m_engine.say("What service")
     m_engine.runAndWait()
     site = input(colored("What service ? ", color))
+
+    site = site.lower()
 
     if job == "insert":
         m_engine.say(f"Insert a new {site} mail")
