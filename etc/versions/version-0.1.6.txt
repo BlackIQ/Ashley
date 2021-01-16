@@ -95,4 +95,3 @@ Updates :
     Fix input lines . Edit \n in some parts
     Colorize manual table borders
     Colorize Headers and command in Manual
-    
