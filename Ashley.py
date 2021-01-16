@@ -16,12 +16,13 @@
 """
 
 # Import Py libs
-from Pack.status import name as n
 from etc.man.man import help
 import Pack.core as core
 
 core.clear()
 core.check()
+
+from Pack.status import name as n
 
 from termcolor import colored
 from random import choice
