@@ -135,14 +135,18 @@ def mail(job):
         m_engine.runAndWait()
         password = getpass(colored(f"What is your {site} password ? ", color))
 
-        cursor.execute(
-            f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
+        if not (fname == None and lname == None and phone == None and username == None and password == None):
+            cursor.execute(
+                f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{username}' , '{password}' , '{phone}' , '{site}')")
 
-        cnx.commit()
+            cnx.commit()
 
-        m_engine.say("Done")
-        m_engine.runAndWait()
-        print(colored("\nDone !\n", color))
+            m_engine.say("Done")
+            m_engine.runAndWait()
+
+            print(colored("\nDone !\n", color))
+        else:
+            print("Fill all field . TNX !")
 
     elif job == "select":
         cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
