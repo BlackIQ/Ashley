@@ -81,17 +81,6 @@ def check():
 
         quit()
 
-# Start the MySQL connector
-cnx = mysql.connector.connect(
-    host=host,
-    user=user,
-    password=password,
-    database=database
-)
-
-# Make a cursor
-cursor = cnx.cursor()
-
 
 def init():
     engine = pyttsx3.init()
@@ -174,6 +163,17 @@ def init():
 
 
 def do(job):
+    # Start the MySQL connector
+    cnx = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database
+    )
+
+    # Make a cursor
+    cursor = cnx.cursor()
+
     c_engine = pyttsx3.init()
 
     table = "Costume"
@@ -239,6 +239,17 @@ def do(job):
 
 
 def mail(job):
+    # Start the MySQL connector
+    cnx = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database
+    )
+
+    # Make a cursor
+    cursor = cnx.cursor()
+
     m_engine = pyttsx3.init()
 
     table = "Emails"
@@ -299,6 +310,17 @@ def mail(job):
 
 
 def category(which):
+    # Start the MySQL connector
+    cnx = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database
+    )
+
+    # Make a cursor
+    cursor = cnx.cursor()
+
     if which == "mail":
         table = "Emails"
         color = "magenta"
