@@ -16,7 +16,10 @@
 """
 
 # Import user's data
-from .status import *
+try:
+    from .status import *
+except:
+    pass
 
 # Import python libs
 from prettytable import PrettyTable
