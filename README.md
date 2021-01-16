@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
     <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
     <h1>Hey There , I am Ashley !</h1>
-    <p><b>Ashley</b> Version <sup><b>0.1.4</b></sup></p>
+    <p><b>Ashley</b> Version <sup><b>0.1.5</b></sup></p>
     <p>Last Update : <b>Jan , 12 , 2021</b></p>
     <hr>
     <h2>Requirements ?</h2>
