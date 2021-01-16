@@ -15,16 +15,13 @@
 
 """
 
-# Import Check
-import Pack.first as check
-
-check.clear()
-check.check()
-
 # Import Py libs
 from Pack.status import name as n
 from etc.man.man import help
 import Pack.core as core
+
+core.clear()
+core.check()
 
 from termcolor import colored
 from random import choice
