@@ -20,10 +20,64 @@ from .status import *
 
 # Import python libs
 from prettytable import PrettyTable
+import mysql.connector
+import os
+from termcolor import colored
 from getpass import getpass
 import mysql.connector
 import pyttsx3
-from termcolor import colored
+
+
+def clear():
+    os.system("clear")
+
+
+def check():
+    # Import user's data
+    try:
+        from Pack.status import status
+
+        if status == True:
+            pass
+
+    # If Not
+    except:
+        engine = pyttsx3.init()
+
+        engine.say("Ashley database is not set")
+        print(colored("Ashley database is not set .", "magenta"))
+        engine.runAndWait()
+        engine.say("do yo want to install")
+        print(colored("do yo want to install ?", "magenta"))
+        engine.runAndWait()
+        ask = input(colored('[y , n] : ', "yellow"))
+        if ask == 'y':
+            engine.say("Runnung init")
+            print(colored("\nRunning init .", "blue"))
+            engine.runAndWait()
+            os.system('python3 Pack/init.py')
+            try:
+                from Pack.status import status
+
+                if status == True:
+                    pass
+            except:
+                engine.say("You entered wrong information")
+                print(colored("You entered wrong information .", "red"))
+                engine.runAndWait()
+                quit()
+        else:
+            quit()
+        engine.say("ok , done")
+        print(colored("ok , done !", "green"))
+        engine.runAndWait()
+
+        engine.say("Please restart Ashley")
+        print(colored("Please restart Ashley !", "magenta"))
+        engine.runAndWait()
+
+        quit()
+
 
 # Start the MySQL connector
 cnx = mysql.connector.connect(
@@ -76,7 +130,8 @@ def do(job):
         c_engine.runAndWait()
         password = getpass(colored(f"What is your {site} password ? ", color))
 
-        if not (fname == None and lname == None and email == None and phone == None and username == None and password == None):
+        if not (
+                fname == None and lname == None and email == None and phone == None and username == None and password == None):
             cursor.execute(
                 f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
 
