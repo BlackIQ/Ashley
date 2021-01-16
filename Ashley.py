@@ -41,7 +41,7 @@ system("clear")
 a_engine.say("Welcome")
 a_engine.runAndWait()
 
-print(colored("Welcome !\n", color))
+print(colored("Welcome !", color))
 
 # Main loop
 while True:
@@ -50,7 +50,7 @@ while True:
 
     a_engine.say(f"What you wanna do {n}")
     a_engine.runAndWait()
-    q = input(colored(f"What you wanna do {n} ? ", color))
+    q = input(colored(f"\nWhat you wanna do {n} ? ", color))
 
     # Switching !
 
