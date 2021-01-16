@@ -42,6 +42,7 @@ def do(job):
 
     table = "Costume"
     color = "yellow"
+
     c_engine.say("What site")
     c_engine.runAndWait()
     site = input(colored("What site ? ", color))
@@ -75,14 +76,18 @@ def do(job):
         c_engine.runAndWait()
         password = getpass(colored(f"What is your {site} password ? ", color))
 
-        cursor.execute(
-            f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
+        if not (fname == None and lname == None and email == None and phone == None and username == None and password == None):
+            cursor.execute(
+                f"INSERT INTO {table} VALUES ('{fname}' , '{lname}' , '{email}' , '{phone}' , '{username}' , '{password}' , '{site}')")
 
-        cnx.commit()
+            cnx.commit()
 
-        c_engine.say("Done")
-        c_engine.runAndWait()
-        print(colored("\nDone !\n", "yellow"))
+            c_engine.say("Done")
+            c_engine.runAndWait()
+
+            print(colored("\nDone !\n", "yellow"))
+        else:
+            print("Fill all field . TNX !")
 
     elif job == "select":
         cursor.execute(f"SELECT * FROM {table} WHERE Site = '{site}'")
