@@ -44,7 +44,7 @@ sudo systemctl restart mysql.service
 
 > Make a costume user . This is an example .
 
-- Now you need to clone Ashley and install liba
+- Now you need to clone Ashley and install libs
 
 ```
 git clone https://github.com/BlackIQ/Ashley && cd Ashley
