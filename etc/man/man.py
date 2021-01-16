@@ -19,52 +19,103 @@ import os
 
 def help():
     os.system("clear")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("|                                        Welcome to Ashley Help !                                        |")
-    print("|                                         Clever Password Saver                                          |")
-    print("+--------------------------------------------------------------------------------------------------------+")
+    from termcolor import colored
+
+    yellow = "yellow"
+
+    pip = colored("|", yellow)
+    plus = colored("+", yellow)
+    dash = colored("-", yellow)
+
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip}                                        Welcome to Ashley Help !                                        {pip}")
+    print(
+        f"{pip}                                         Clever Password Saver                                          {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print("\n")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("| Sites                                                                                                  |")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("|                                                                                                        |")
-    print("| Insert ( Add ) :                                                                                       |")
-    print("|     - new site : To add a new site account                                                             |")
-    print("|                                                                                                        |")
-    print("| Select ( Show ) :                                                                                      |")
-    print("|     - show site : To show just a one sites account                                                     |")
-    print("|                                                                                                        |")
-    print("| Select all sites account :                                                                             |")
-    print("|     - show sites : To show all sites accounts that saved                                               |")
-    print("+--------------------------------------------------------------------------------------------------------+")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip} Sites                                                                                                  {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} new site                                                                                               {pip}")
+    print(
+        f"{pip} {dash} To add a new site account                                                                            {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} show site                                                                                              {pip}")
+    print(
+        f"{pip} {dash} To show just a one site account                                                                      {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} show sites                                                                                             {pip}")
+    print(
+        f"{pip} {dash} To show all sites accounts that saved                                                                {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print("\n")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("| Emails                                                                                                 |")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("|                                                                                                        |")
-    print("| Insert ( Add ) :                                                                                       |")
-    print("|     - new mail : To add a new email account                                                            |")
-    print("|                                                                                                        |")
-    print("| Select ( Show ) :                                                                                      |")
-    print("|     - show mail : To show just a one mail account                                                      |")
-    print("|                                                                                                        |")
-    print("| Select all sites account :                                                                             |")
-    print("|     - show mails : To show all mails accounts that saved                                               |")
-    print("+--------------------------------------------------------------------------------------------------------+")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip} Emails                                                                                                 {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} new mail                                                                                               {pip}")
+    print(
+        f"{pip} {dash} To add a new mail account                                                                            {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} show mail                                                                                              {pip}")
+    print(
+        f"{pip} {dash} To show just a one mail account                                                                      {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} show mails                                                                                             {pip}")
+    print(
+        f"{pip} {dash} To show all mails accounts that saved                                                                {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print("\n")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("| Other Commands                                                                                         |")
-    print("+--------------------------------------------------------------------------------------------------------+")
-    print("|                                                                                                        |")
-    print("| clear                                                                                                  |")
-    print("| - Clear the screen                                                                                     |")
-    print("|                                                                                                        |")
-    print("| help                                                                                                   |")
-    print("| - Clear the screen                                                                                     |")
-    print("|                                                                                                        |")
-    print("| exit                                                                                                   |")
-    print("| - Close Ashley                                                                                         |")
-    print("+--------------------------------------------------------------------------------------------------------+")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip} Other Commands                                                                                         {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} clear                                                                                                  {pip}")
+    print(
+        f"{pip} {dash} Clear the screen                                                                                     {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} help                                                                                                   {pip}")
+    print(
+        f"{pip} {dash} Clear the screen                                                                                     {pip}")
+    print(
+        f"{pip}                                                                                                        {pip}")
+    print(
+        f"{pip} exit                                                                                                   {pip}")
+    print(
+        f"{pip} {dash} Close Ashley                                                                                         {pip}")
+    print(
+        f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print("\n")
     input("Did you Read ? Just Enter :)")
     os.system("clear")
