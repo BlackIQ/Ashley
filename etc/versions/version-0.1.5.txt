@@ -82,4 +82,9 @@ Last Versions :
 
 Updates :
     - version 0.1.5
-    
+    Update Core and make it so lighter than last versions
+    Update Ashley command manager
+    make a new function to use all
+    Remove career or other categories to have a light app
+    Update everything
+    Change init queries
