@@ -94,3 +94,5 @@ Updates :
     Fix Field Checker bugs
     Fix input lines . Edit \n in some parts
     Colorize manual table borders
+    Colorize Headers and command in Manual
+    
