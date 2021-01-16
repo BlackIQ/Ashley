@@ -10,7 +10,7 @@
 | Developer : Amirhossein Mohammsdi     |
 | Github    : github.com/BlackIQ/Ashley |
 |                                       |
-| Last Update : 16 , Jan , 2021         |
+| Last Update : Jan , 16 , 2021         |
 +---------------------------------------+
 
 """
