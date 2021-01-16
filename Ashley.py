@@ -66,7 +66,7 @@ while True:
 
     # Select Everything saved
     elif q == "show sites":
-        core.do("all")
+        core.category("site")
 
     # <-----------------------------------------------> #
 
@@ -80,7 +80,7 @@ while True:
 
     # Select Everything in Emails
     elif q == "show mails":
-        core.mail('all')
+        core.category("mail")
 
     # <-----------------------------------------------> #
 
