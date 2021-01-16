@@ -15,49 +15,51 @@
 
 """
 
+from termcolor import colored
 import os
+
+yellow = "yellow"
+magenta = "magenta"
+
+pip = colored("|", yellow)
+plus = colored("+", yellow)
+dash = colored("-", yellow)
+
+line1 = colored('Welcome to Ashley Help !' , magenta)
+line2 = colored('Clever Password Saver' , magenta)
 
 def help():
     os.system("clear")
-    from termcolor import colored
-
-    yellow = "yellow"
-
-    pip = colored("|", yellow)
-    plus = colored("+", yellow)
-    dash = colored("-", yellow)
 
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
-    print(
-        f"{pip}                                        Welcome to Ashley Help !                                        {pip}")
-    print(
-        f"{pip}                                         Clever Password Saver                                          {pip}")
+    print(f"{pip}                                        {line1}                                        {pip}")
+    print(f"{pip}                                         {line2}                                          {pip}")
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print("\n")
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
-        f"{pip} Sites                                                                                                  {pip}")
+        f"{pip} {colored('Sites', 'green')}                                                                                                  {pip}")
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} new site                                                                                               {pip}")
+        f"{pip} {colored('new site', 'blue')}                                                                                               {pip}")
     print(
         f"{pip} {dash} To add a new site account                                                                            {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} show site                                                                                              {pip}")
+        f"{pip} {colored('show site', 'blue')}                                                                                              {pip}")
     print(
         f"{pip} {dash} To show just a one site account                                                                      {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} show sites                                                                                             {pip}")
+        f"{pip} {colored('show sites', 'blue')}                                                                                             {pip}")
     print(
         f"{pip} {dash} To show all sites accounts that saved                                                                {pip}")
     print(
@@ -66,25 +68,25 @@ def help():
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
-        f"{pip} Emails                                                                                                 {pip}")
+        f"{pip} {colored('Emails', 'green')}                                                                                                 {pip}")
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} new mail                                                                                               {pip}")
+        f"{pip} {colored('new mail', 'blue')}                                                                                               {pip}")
     print(
         f"{pip} {dash} To add a new mail account                                                                            {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} show mail                                                                                              {pip}")
+        f"{pip} {colored('show mail', 'blue')}                                                                                              {pip}")
     print(
         f"{pip} {dash} To show just a one mail account                                                                      {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} show mails                                                                                             {pip}")
+        f"{pip} {colored('show mails', 'blue')}                                                                                             {pip}")
     print(
         f"{pip} {dash} To show all mails accounts that saved                                                                {pip}")
     print(
@@ -93,25 +95,25 @@ def help():
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
-        f"{pip} Other Commands                                                                                         {pip}")
+        f"{pip} {colored('Other Commands', 'green')}                                                                                         {pip}")
     print(
         f"{plus}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{dash}{plus}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} clear                                                                                                  {pip}")
+        f"{pip} {colored('clear', 'blue')}                                                                                                  {pip}")
     print(
         f"{pip} {dash} Clear the screen                                                                                     {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} help                                                                                                   {pip}")
+        f"{pip} {colored('help', 'blue')}                                                                                                   {pip}")
     print(
         f"{pip} {dash} Clear the screen                                                                                     {pip}")
     print(
         f"{pip}                                                                                                        {pip}")
     print(
-        f"{pip} exit                                                                                                   {pip}")
+        f"{pip} {colored('help', 'blue')}                                                                                                   {pip}")
     print(
         f"{pip} {dash} Close Ashley                                                                                         {pip}")
     print(
