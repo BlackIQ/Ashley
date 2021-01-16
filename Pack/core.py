@@ -17,7 +17,7 @@
 
 # Import user's data
 try:
-    from .status import *
+    from .status import password as pswd, user as usr, host as hst, database as db
 except:
     pass
 
@@ -58,7 +58,7 @@ def check():
             engine.say("Runnung init")
             print(colored("\nRunning init .", "blue"))
             engine.runAndWait()
-            os.system('python3 Pack/init.py')
+            init()
             try:
                 from Pack.status import status
 
@@ -165,10 +165,10 @@ def init():
 def do(job):
     # Start the MySQL connector
     cnx = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database
+        host=hst,
+        user=usr,
+        password=pswd,
+        database=db
     )
 
     # Make a cursor
@@ -241,10 +241,10 @@ def do(job):
 def mail(job):
     # Start the MySQL connector
     cnx = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database
+        host=hst,
+        user=usr,
+        password=pswd,
+        database=db
     )
 
     # Make a cursor
@@ -312,10 +312,10 @@ def mail(job):
 def category(which):
     # Start the MySQL connector
     cnx = mysql.connector.connect(
-        host=host,
-        user=user,
-        password=password,
-        database=database
+        host=hst,
+        user=usr,
+        password=pswd,
+        database=db
     )
 
     # Make a cursor
