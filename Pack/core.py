@@ -36,6 +36,7 @@ cnx = mysql.connector.connect(
 # Make a cursor
 cursor = cnx.cursor()
 
+
 def do(job):
     c_engine = pyttsx3.init()
 
@@ -93,15 +94,6 @@ def do(job):
 
         print(colored(outtable, "blue"))
 
-    elif job == "all":
-        cursor.execute(f"SELECT * FROM {table}")
-        outtable = PrettyTable()
-        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
-
-        for (fname, lname, email, phone, username, password, site) in cursor:
-            outtable.add_row([fname, lname, email, phone, username, password, site])
-
-        print(colored(outtable, "blue"))
 
 def mail(job):
     m_engine = pyttsx3.init()
@@ -156,3 +148,31 @@ def mail(job):
             outtable.add_row([fname, lname, username, password, phone])
 
         print(colored(outtable, 'magenta'))
+
+
+def category(which):
+    if which == "mail":
+        table = "Emails"
+        color = "magenta"
+
+        cursor.execute(f"SELECT * FROM {table}")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Username", "Password", "Phone", "Service"]
+
+        for (fname, lname, username, password, phone, site) in cursor:
+            outtable.add_row([fname, lname, username, password, phone, site])
+
+        print(colored(outtable, color))
+
+    elif which == "site":
+        table = "Costume"
+        color = "blue"
+
+        cursor.execute(f"SELECT * FROM {table}")
+        outtable = PrettyTable()
+        outtable.field_names = ["First Name", "Last Name", "Email", "Phone", "Username", "Password", "Site"]
+
+        for (fname, lname, email, phone, username, password, site) in cursor:
+            outtable.add_row([fname, lname, email, phone, username, password, site])
+
+        print(colored(outtable, color))
