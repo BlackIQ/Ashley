@@ -84,9 +84,10 @@ def do(job):
 
             c_engine.say("Done")
             c_engine.runAndWait()
-
             print(colored("\nDone !\n", "yellow"))
         else:
+            c_engine.say("Fill all field . Thanks")
+            c_engine.runAndWait()
             print("Fill all field . TNX !")
 
     elif job == "select":
@@ -143,9 +144,10 @@ def mail(job):
 
             m_engine.say("Done")
             m_engine.runAndWait()
-
             print(colored("\nDone !\n", color))
         else:
+            m_engine.say("Fill all field . Thanks")
+            m_engine.runAndWait()
             print("Fill all field . TNX !")
 
     elif job == "select":
