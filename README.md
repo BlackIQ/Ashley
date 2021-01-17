@@ -3,8 +3,8 @@
 <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
 
 # Hey there ! It's me , Ashley :)
-##### Version 0.1.6
-##### Last Update : Jan , 17 , 2021
+##### Version 0.1.7
+##### Last Update : Jan , 18 , 2021
 
 Anyway , I can save your passwords in database and help you to never forgot them .
 
