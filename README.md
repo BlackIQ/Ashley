@@ -1,5 +1,9 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_shield)
 
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/downloads/BlackIQ/Ashley/Ashley-V-0.1.7/total">
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/BlackIQ/Ashley/total">
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/BlackIQ/Ashley">
+
 <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
 <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
 <img src="https://img.shields.io/badge/Requirements-See%20Here-orange" alt="Requirements">
