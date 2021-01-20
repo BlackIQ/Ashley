@@ -2,6 +2,8 @@
 <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
 <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
 
+[![Requirements](https://img.shields.io/badge/Requirements-See%20Here-orange)](https://github.com/xenups/bottle_restfool/blob/master/requirements.txt)
+
 # Hey there ! It's me , Ashley :)
 ##### Version 0.1.7
 ##### Last Update : Jan , 18 , 2021
