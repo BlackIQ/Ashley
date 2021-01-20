@@ -1,8 +1,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBlackIQ%2FAshley.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBlackIQ%2FAshley?ref=badge_shield)
 <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
 <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
-
-[![Requirements](https://img.shields.io/badge/Requirements-See%20Here-orange)](https://github.com/xenups/bottle_restfool/blob/master/requirements.txt)
+<img src="https://img.shields.io/badge/Requirements-See%20Here-orange" alt="Requirements">
 
 # Hey there ! It's me , Ashley :)
 ##### Version 0.1.7
