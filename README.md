@@ -4,8 +4,6 @@
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/BlackIQ/Ashley">
 <img src="https://img.shields.io/github/license/BlackIQ/Ashley?style=flat-square" alt="License"/>
 <img src="https://img.shields.io/github/languages/code-size/BlackIQ/Ashley?style=flat-square" alt="Code Size"/>
-<img src="https://img.shields.io/badge/Requirements-See%20Here-orange" alt="Requirements">
-</p>
 
 # Hey there ! It's me , Ashley :)
 ##### Version 0.1.7
